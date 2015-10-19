@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="castAKnowledge" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^\\\\psf\\home\\documents\\visual\ studio\ 2015\\Projects\\CastAKnowledgePros\\CastAKnowledgePros\\obj\\Release\\Package\\PackageTmp$" />
-    <parameterEntry kind="ProviderPath" scope="setAcl" match="^\\\\psf\\home\\documents\\visual\ studio\ 2015\\Projects\\CastAKnowledgePros\\CastAKnowledgePros\\obj\\Release\\Package\\PackageTmp$" />
+  <parameter name="IIS Web Application Name" description="" value="Cast-A-Knowledge" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^\\\\psf\\Home\\Desktop\\GitHub\\Cast-A-KnowledgePro\\CastAKnowledgePros\\CastAKnowledgePros\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^\\\\psf\\Home\\Desktop\\GitHub\\Cast-A-KnowledgePro\\CastAKnowledgePros\\CastAKnowledgePros\\obj\\Release\\Package\\PackageTmp$" />
   </parameter>
-  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:vknoy8g19h.database.windows.net,1433;Initial Catalog=castAKnowledge_AzureDB;User Id=bernal011584Azure@vknoy8g19h;Password=Yahiralexander0115?" tags="">
-    <parameterEntry kind="XmlFile" scope="\\\\psf\\home\\documents\\visual\ studio\ 2015\\Projects\\CastAKnowledgePros\\CastAKnowledgePros\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:vknoy8g19h.database.windows.net,1433;Initial Catalog=CastAKnowledgeAzureDB;User Id=bernal011584Azure@vknoy8g19h;Password=Yahiralexander0115?" tags="">
+    <parameterEntry kind="XmlFile" scope="\\\\psf\\Home\\Desktop\\GitHub\\Cast-A-KnowledgePro\\CastAKnowledgePros\\CastAKnowledgePros\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
 </parameters>
