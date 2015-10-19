@@ -44,13 +44,14 @@ namespace CastAKnowledgePros
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/app.css",
+                      
                       //"~/Content/main.css",
                       "~/Content/PagedList.css",
                       "~/Content/animate.css",
                       "~/Content/font-awesome.min.css",
                       "~/Content/jquery.fs.wallpaper.css",
                       //"~/Content/site.css",
+                      "~/Content/app.css",
                       "~/Content/nanogallery.min.css"));
         }
     }
