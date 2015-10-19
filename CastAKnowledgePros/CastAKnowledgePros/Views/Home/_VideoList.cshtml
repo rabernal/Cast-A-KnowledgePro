@@ -1,0 +1,54 @@
+﻿@using PagedList;
+@model IPagedList<CastAKnowledgePros.Models.VideoModel>
+
+@{ var comment = "";}
+<div id="displayVideoList">
+    <section class="col-md-9 col-md-pull-3">
+
+        @foreach (var item in Model)
+        {
+
+            <section class="col-sm-12 ">
+                @*@item.VidTitle*@
+                <div class="col-sm-6 ">
+
+                    <iframe width="100%"
+                            height="100%"
+                            src="@Html.DisplayFor(modelItem => item.VidSource)"
+                            frameborder="0"
+                            allowfullscreen></iframe>
+
+                </div>
+
+                @{
+                    // this is use to redirect to comment section on youtube.
+                    comment = item.VidSource.Replace("embed/", "watch?v=");
+                }
+
+                <div class="col-sm-6 video-description">
+                    <header>@item.VidDescription</header><br />
+                    <article>
+                        <p>Click <b><a href="@comment" target="_blank"><mark>here</mark></a></b> to add a comment</p>
+                        <p>Plase checkout my YouTube Channel... <a href="https://www.youtube.com/channel/UCy6cI5xNGTsNDC26InDI0Tg/videos?view_as=public" target="_blank"><i><img src="~/images/YouTube-social-square_red_24px.png" /></i></a> </p>
+                        <script src="https://apis.google.com/js/platform.js"></script>
+                        <div class="g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="default" data-count="default"></div>
+                    </article>
+                </div>
+
+
+            </section>
+
+            @*<tr>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                    </td>
+                </tr>*@
+
+                    } @*end of foreach*@
+
+
+
+                </section>
+            </div>
