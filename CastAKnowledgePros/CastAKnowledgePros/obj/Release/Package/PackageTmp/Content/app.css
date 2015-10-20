@@ -8,6 +8,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: #987d9d;
     background-color: #f7f7f7;
+    margin: 0px;
 
 }
 /*this is in use*/
@@ -266,9 +267,9 @@ a:hover {
     }
 
     /*CAROUSEL IMAGE MARGING*/
-    #carousel {
+    /*#carousel {
         margin: 80px auto;
-    }
+    }*/
 
         #carousel img {
             width: 100%;
@@ -454,9 +455,9 @@ a:hover {
     }
 
         /*CAROUSEL IMAGE MARGING*/
-    #carousel {
+    /*#carousel {
         margin: 80px auto;
-    }
+    }*/
 
         #carousel img {
             width: 100%;
