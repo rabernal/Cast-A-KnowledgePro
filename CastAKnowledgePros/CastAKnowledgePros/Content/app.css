@@ -6,6 +6,7 @@ body {
     position: relative;
     background-color: #f7f7f7;
     overflow-y:unset;
+    margin: 0px;
 }
 /*this is in use*/
 header {
