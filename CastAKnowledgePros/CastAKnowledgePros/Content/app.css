@@ -115,7 +115,7 @@ a:hover {
     background-attachment: fixed;
 }
 
-@media (max-width: 736px) {
+@media (max-width: 737px) {
     .fixed-attachment {
         background-attachment: scroll;
     }

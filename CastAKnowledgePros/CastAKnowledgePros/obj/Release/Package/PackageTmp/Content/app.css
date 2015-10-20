@@ -5,6 +5,7 @@ body {
     color: #987d9d;
     position: relative;
     background-color: #f7f7f7;
+    overflow-y:unset;
 }
 /*this is in use*/
 header {
@@ -114,7 +115,7 @@ a:hover {
     background-attachment: fixed;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 736px) {
     .fixed-attachment {
         background-attachment: scroll;
     }
