@@ -1,10 +1,10 @@
 ﻿html{
     margin:0px;
+        height: 100%;
+    width: 100%;
 }
 body {
     font-family: 'Open Sans', sans-serif;
-    height: 100%;
-    width: 100%;
     color: #987d9d;
     background-color: #f7f7f7;
 
@@ -27,6 +27,8 @@ footer {
     border: 3px thin #9d7d9d;
     box-shadow: rgba(0,0,0,0.5) 10px 10px 60px;
 }
+
+
 
 
 
@@ -64,6 +66,7 @@ a:hover {
     color: #bbb;
 }
 
+
 .cbp-af-header-shrink {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -72,6 +75,7 @@ a:hover {
 
 .img-responsive {
     /*margin: 0px;*/
+    margin:auto;
     border: 3px thin #9d7d9d;
     box-shadow: rgba(0,0,0,0.5) 10px 10px 60px;
 }
@@ -94,7 +98,7 @@ a:hover {
     padding: 20px;
     top: 50%;
     left: 50%;
-    margin-right: -50%;
+    margin-right: -60%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
 }
@@ -330,8 +334,10 @@ a:hover {
 }*/
     .down-button {
         position: absolute;
-        bottom: 21%;
-        width: 100%;
+        margin-left:19%;
+        bottom: 25%;
+        width: 60%;
+        padding: 10px;
         text-align: center;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
@@ -517,8 +523,10 @@ a:hover {
 }*/
     .down-button {
         position: absolute;
-        bottom: 21%;
-        width: 100%;
+        margin-left:19%;
+        bottom: 25%;
+        width: 60%;
+        padding: 10px;
         text-align: center;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
@@ -703,8 +711,10 @@ a:hover {
 }*/
     .down-button {
         position: absolute;
-        bottom: 21%;
-        width: 100%;
+        margin-left:19%;
+        bottom: 25%;
+        width: 60%;
+        padding: 10px;
         text-align: center;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
@@ -888,8 +898,10 @@ a:hover {
 }*/
     .down-button {
         position: absolute;
-        bottom: 21%;
-        width: 100%;
+        margin-left:19%;
+        bottom: 25%;
+        width: 60%;
+        padding: 10px;
         text-align: center;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
@@ -1072,8 +1084,10 @@ a:hover {
 }*/
     .down-button {
         position: absolute;
-        bottom: 21%;
-        width: 100%;
+        margin-left:19%;
+        bottom: 25%;
+        width: 60%;
+        padding: 10px;
         text-align: center;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
