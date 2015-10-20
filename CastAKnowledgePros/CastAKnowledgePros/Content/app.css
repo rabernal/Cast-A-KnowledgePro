@@ -209,7 +209,7 @@ a:hover {
         border-radius: 20px;
         background: rgba(0,0,0,0.24);
         color: whitesmoke;
-        width: 100%;
+        width: 90%;
         height: 2.5em;
         /*border: 1px solid #454545;*/
         height: 0 0 30px;
@@ -251,7 +251,7 @@ a:hover {
         -moz-border-radius: 10px;
         border-radius: 10px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        width: 93%;
+        width: 83%;
         color: whitesmoke;
     }
 
@@ -335,9 +335,9 @@ a:hover {
     background-color: #312626;
 }*/
 .down-button {
-    position: absolute;
+position: relative;
     margin-left: 19%;
-    bottom: 85.5%;
+    bottom: -480px;
     width: 61%;
     padding: 10px;
     text-align: center;
@@ -398,7 +398,7 @@ a:hover {
         border-radius: 20px;
         background: rgba(0,0,0,0.24);
         color: whitesmoke;
-        width: 100%;
+        width: 90%;
         height: 2.5em;
         /*border: 1px solid #454545;*/
         height: 0 0 30px;
@@ -440,7 +440,7 @@ a:hover {
         -moz-border-radius: 10px;
         border-radius: 10px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        width: 93%;
+        width: 83%;
         color: whitesmoke;
     }
 
@@ -525,9 +525,9 @@ a:hover {
     background-color: #312626;
 }*/
 .down-button {
-    position: absolute;
+position: relative;
     margin-left: 19%;
-    bottom: 85.5%;
+    bottom: -480px;
     width: 61%;
     padding: 10px;
     text-align: center;
@@ -714,9 +714,9 @@ a:hover {
     background-color: #312626;
 }*/
 .down-button {
-    position: absolute;
+position: relative;
     margin-left: 19%;
-    bottom: 85.5%;
+    bottom: -480px;
     width: 61%;
     padding: 10px;
     text-align: center;
@@ -902,9 +902,9 @@ a:hover {
     background-color: #312626;
 }*/
 .down-button {
-    position: absolute;
+position: relative;
     margin-left: 19%;
-    bottom: 85.5%;
+    bottom: -480px;
     width: 61%;
     padding: 10px;
     text-align: center;
@@ -1089,9 +1089,9 @@ a:hover {
     background-color: #312626;
 }*/
 .down-button {
-    position: absolute;
+position: relative;
     margin-left: 19%;
-    bottom: 85.5%;
+    bottom: -480px;
     width: 61%;
     padding: 10px;
     text-align: center;
@@ -1131,9 +1131,19 @@ a:hover {
 }
 /*END OF MEDIA QUERY*/
 
+/*******IMPORTANT THIS IS TO HELP MOBILE LOOK MARGIN ISSUE*******/
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
 
-
-
+/***********END************/
 
 
 
