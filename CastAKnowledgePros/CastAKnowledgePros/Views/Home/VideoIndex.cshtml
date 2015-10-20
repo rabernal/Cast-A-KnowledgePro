@@ -18,8 +18,9 @@
         <form method="get" action="@Url.Action("VideoIndex")"
               data-search-ajax="true" data-search-target="#displayVideoList">
 
-            <span id="spanSearch">Search Videos:</span> <input type="search" name="searchTerm" @*class="mySearch"*@ id="input"
+            <span id="spanSearch">Search Videos:</span> <input type="text" name="searchTerm" class="search-box" id="input"
                                                                size="40" placeholder="  Search..." data-search-autocomplete="@Url.Action("AutoComplete")" />
+            <button class="close-icon" type="reset"></button>
         </form>
     </section>
 
