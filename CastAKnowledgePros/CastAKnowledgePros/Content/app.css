@@ -332,7 +332,7 @@ a:hover {
         .video-description h5 {
             border-bottom: 1px solid #167ac6;
             font-size: 1.1em;
-            white-space:pre-line;
+            white-space: pre-line;
             width: 100%;
             height: 40%;
             overflow: hidden;
@@ -358,18 +358,40 @@ a:hover {
         z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
+
     .text-banner {
-        text-align: center;
+        text-align: left;
         margin: 40px 20px;
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+        -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 40px; /* Firefox */
+        column-gap: 40px;
+        -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+        -moz-column-rule-style: solid; /* Firefox */
+        column-rule-style: solid;
+        -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+        -moz-column-rule-width: 1px; /* Firefox */
+        column-rule-width: 1px;
+        -webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+        -moz-column-rule-color: lightblue; /* Firefox */
+        column-rule-color: lightblue;
     }
 
-        .text-banner h1 {
+    /*.text-banner h1 {
             font-size: 3em;
-        }
+        }*/
 
-        .text-banner p {
-            font-size: 1.3em;
-        }
+    /*.text-banner p {
+    font-size: 1.3em;
+}*/
+
+    .welcomeTitle {
+        margin-top:56px;
+        text-align: center;
+        font-size: 1.7em;
+    }
 
     /*END OF START UP PAGE*/
 
@@ -540,7 +562,7 @@ a:hover {
         .video-description h5 {
             border-bottom: 1px solid #167ac6;
             font-size: 1.1em;
-            white-space:pre-line;
+            white-space: pre-line;
             width: 100%;
             height: 40%;
             overflow: hidden;
@@ -566,18 +588,38 @@ a:hover {
         z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
-    .text-banner {
-        text-align: center;
+     .text-banner {
+        text-align: left;
         margin: 40px 20px;
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+        -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 40px; /* Firefox */
+        column-gap: 40px;
+        -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+        -moz-column-rule-style: solid; /* Firefox */
+        column-rule-style: solid;
+        -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+        -moz-column-rule-width: 1px; /* Firefox */
+        column-rule-width: 1px;
+        -webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+        -moz-column-rule-color: lightblue; /* Firefox */
+        column-rule-color: lightblue;
     }
 
-        .text-banner h1 {
+    /*.text-banner h1 {
             font-size: 3em;
-        }
+        }*/
 
-        .text-banner p {
-            font-size: 1.3em;
-        }
+    /*.text-banner p {
+    font-size: 1.3em;
+}*/
+
+    .welcomeTitle {
+        text-align: center;
+        font-size: 2.4em;
+    }
 
     /*END OF START UP PAGE*/
 
@@ -758,28 +800,48 @@ a:hover {
     background-color: #312626;
 }*/
     .down-button {
-    position: relative;
-    margin-left: 19%;
-    /* bottom: -480px; */
-    margin-bottom: -88px;
-    width: 61%;
-    padding: 10px;
-    text-align: center;
-    z-index: 1030;
+        position: relative;
+        margin-left: 19%;
+        /* bottom: -480px; */
+        margin-bottom: -88px;
+        width: 61%;
+        padding: 10px;
+        text-align: center;
+        z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
-    .text-banner {
-        text-align: center;
+     .text-banner {
+        text-align: left;
         margin: 40px 20px;
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+        -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 40px; /* Firefox */
+        column-gap: 40px;
+        -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+        -moz-column-rule-style: solid; /* Firefox */
+        column-rule-style: solid;
+        -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+        -moz-column-rule-width: 1px; /* Firefox */
+        column-rule-width: 1px;
+        -webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+        -moz-column-rule-color: lightblue; /* Firefox */
+        column-rule-color: lightblue;
     }
 
-        .text-banner h1 {
+    /*.text-banner h1 {
             font-size: 3em;
-        }
+        }*/
 
-        .text-banner p {
-            font-size: 1.3em;
-        }
+    /*.text-banner p {
+    font-size: 1.3em;
+}*/
+
+    .welcomeTitle {
+        text-align: center;
+        font-size: 2.4em;
+    }
 
     /*END OF START UP PAGE*/
 
@@ -959,29 +1021,48 @@ a:hover {
     background-color: #312626;
 }*/
     .down-button {
-    position: relative;
-    margin-left: 19%;
-    /* bottom: -480px; */
-    margin-bottom: -88px;
-    width: 61%;
-    padding: 10px;
-    text-align: center;
-    z-index: 1030;
+        position: relative;
+        margin-left: 19%;
+        /* bottom: -480px; */
+        margin-bottom: -88px;
+        width: 61%;
+        padding: 10px;
+        text-align: center;
+        z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
-        text-align: center;
+        text-align: left;
         margin: 40px 20px;
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+        -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 40px; /* Firefox */
+        column-gap: 40px;
+        -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+        -moz-column-rule-style: solid; /* Firefox */
+        column-rule-style: solid;
+        -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+        -moz-column-rule-width: 1px; /* Firefox */
+        column-rule-width: 1px;
+        -webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+        -moz-column-rule-color: lightblue; /* Firefox */
+        column-rule-color: lightblue;
     }
 
-        .text-banner h1 {
+    /*.text-banner h1 {
             font-size: 3em;
-        }
+        }*/
 
-        .text-banner p {
-            font-size: 1.3em;
-        }
+    /*.text-banner p {
+    font-size: 1.3em;
+}*/
 
+    .welcomeTitle {
+        text-align: center;
+        font-size: 2.4em;
+    }
     /*END OF START UP PAGE*/
 
 
@@ -1159,28 +1240,48 @@ a:hover {
     background-color: #312626;
 }*/
     .down-button {
-    position: relative;
-    margin-left: 19%;
-    /* bottom: -480px; */
-    margin-bottom: -88px;
-    width: 61%;
-    padding: 10px;
-    text-align: center;
-    z-index: 1030;
+        position: relative;
+        margin-left: 19%;
+        /* bottom: -480px; */
+        margin-bottom: -88px;
+        width: 61%;
+        padding: 10px;
+        text-align: center;
+        z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
-    .text-banner {
-        text-align: center;
+       .text-banner {
+        text-align: left;
         margin: 40px 20px;
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+        -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 40px; /* Firefox */
+        column-gap: 40px;
+        -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+        -moz-column-rule-style: solid; /* Firefox */
+        column-rule-style: solid;
+        -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+        -moz-column-rule-width: 1px; /* Firefox */
+        column-rule-width: 1px;
+        -webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+        -moz-column-rule-color: lightblue; /* Firefox */
+        column-rule-color: lightblue;
     }
 
-        .text-banner h1 {
+    /*.text-banner h1 {
             font-size: 3em;
-        }
+        }*/
 
-        .text-banner p {
-            font-size: 1.3em;
-        }
+    .text-banner p {
+    font-size: 1.3em;
+}
+
+    .welcomeTitle {
+        text-align: center;
+        font-size: 3.4em;
+    }
 
     /*END OF START UP PAGE*/
 
