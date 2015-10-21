@@ -194,13 +194,10 @@ a:hover {
         font-size: 14px;
         color: #9d7d9d;
     }*/
-    span {
-        display: none;
-    }
 
-    p {
+    /*p {
         animation: backwards 2s ease-in alternate 3;
-    }
+    }*/
 
 
     /*------------------------------Search*/
@@ -388,7 +385,7 @@ a:hover {
 }*/
 
     .welcomeTitle {
-        margin-top:56px;
+        margin-top: 56px;
         text-align: center;
         font-size: 1.7em;
     }
@@ -409,6 +406,22 @@ a:hover {
         box-shadow: rgb(255, 255, 255) 10px 10px 60px;
         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
+
+    .search-box {
+        /*background: transparent;*/
+        border: 0;
+        display: inline-block;
+        font-size: 16px;
+        height: 100%;
+        left: 0;
+        margin: 0;
+        outline: none;
+        /*padding: 2px 6px;
+        position: relative;*/
+        width: 98%;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
 }
 
 
@@ -424,11 +437,7 @@ a:hover {
         /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     }
 
-    span {
-        display: none;
-        /*font-size: 14px;
-        color: #9d7d9d;*/
-    }
+
 
 
 
@@ -588,7 +597,7 @@ a:hover {
         z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
-     .text-banner {
+    .text-banner {
         text-align: left;
         margin: 40px 20px;
         -webkit-column-count: 2; /* Chrome, Safari, Opera */
@@ -637,6 +646,22 @@ a:hover {
         box-shadow: rgb(255, 255, 255) 10px 10px 60px;
         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
+
+    .search-box {
+        /*background: transparent;*/
+        border: 0;
+        display: inline-block;
+        font-size: 16px;
+        height: 100%;
+        left: 0;
+        margin: 0;
+        outline: none;
+        /*padding: 2px 6px;
+        position: relative;*/
+        width: 98%;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
 }
 
 
@@ -650,11 +675,6 @@ a:hover {
         /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     }
 
-    span {
-        display: inline;
-        font-size: 14px;
-        color: #9d7d9d;
-    }
 
 
 
@@ -810,7 +830,7 @@ a:hover {
         z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
-     .text-banner {
+    .text-banner {
         text-align: left;
         margin: 40px 20px;
         -webkit-column-count: 2; /* Chrome, Safari, Opera */
@@ -860,6 +880,22 @@ a:hover {
         box-shadow: rgb(255, 255, 255) 10px 10px 60px;
         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
+
+        .search-box {
+        /*background: transparent;*/
+        border: 0;
+        display: inline-block;
+        font-size: 16px;
+        height: 100%;
+        left: 0;
+        margin: 0;
+        outline: none;
+        /*padding: 2px 6px;
+        position: relative;*/
+        width: 70%;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
 }
 
 
@@ -873,11 +909,6 @@ a:hover {
         /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     }
 
-    span {
-        display: inline;
-        font-size: 14px;
-        color: #9d7d9d;
-    }
 
 
 
@@ -1081,6 +1112,22 @@ a:hover {
         box-shadow: rgb(255, 255, 255) 10px 10px 60px;
         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
+
+        .search-box {
+        /*background: transparent;*/
+        border: 0;
+        display: inline-block;
+        font-size: 16px;
+        height: 100%;
+        left: 0;
+        margin: 0;
+        outline: none;
+        /*padding: 2px 6px;
+        position: relative;*/
+        width: 60%;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
 }
 
 
@@ -1094,11 +1141,6 @@ a:hover {
         /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     }
 
-    span {
-        display: inline;
-        font-size: 14px;
-        color: #9d7d9d;
-    }
 
 
     /*--------------------------------------------*/
@@ -1109,7 +1151,7 @@ a:hover {
         border-radius: 10px;
         background: rgba(0,0,0,0.24);
         color: whitesmoke;
-        width: 20%;
+        width: 30%;
         height: 2.5em;
         /*border: 1px solid #454545;*/
         height: 0 0 30px;
@@ -1134,7 +1176,7 @@ a:hover {
 
         #input:focus {
             box-shadow: 0 0 30px #36d3dd;
-            width: 30%;
+            /*width: 30%;*/
         }
 
     .ui-tooltip {
@@ -1250,7 +1292,7 @@ a:hover {
         z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
-       .text-banner {
+    .text-banner {
         text-align: left;
         margin: 40px 20px;
         -webkit-column-count: 2; /* Chrome, Safari, Opera */
@@ -1270,13 +1312,13 @@ a:hover {
         column-rule-color: lightblue;
     }
 
-    /*.text-banner h1 {
+        /*.text-banner h1 {
             font-size: 3em;
         }*/
 
-    .text-banner p {
-    font-size: 1.3em;
-}
+        .text-banner p {
+            font-size: 1.3em;
+        }
 
     .welcomeTitle {
         text-align: center;
@@ -1299,6 +1341,22 @@ a:hover {
         box-shadow: rgb(255, 255, 255) 10px 10px 60px;
         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
+
+        .search-box {
+        /*background: transparent;*/
+        border: 0;
+        display: inline-block;
+        font-size: 16px;
+        height: 100%;
+        left: 0;
+        margin: 0;
+        outline: none;
+        /*padding: 2px 6px;
+        position: relative;*/
+        width: 40%;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
 }
 /*END OF MEDIA QUERY*/
 
@@ -1315,36 +1373,31 @@ a:hover {
     margin-left: 0px;
 }
 
-/*THIS IS TO ADD THE X RESET BUTTON*/
+/*THIS IS TO ADD THE X RESET BUTTON and FORMATING TO SEARCH FIELD*/
 .search-box, .close-icon, .search-wrapper {
     position: relative;
-    padding: 10px;
+    padding: .3em 0;
 }
 
 .search-wrapper {
-    width: 500px;
+    /*width: 500px;*/
     margin: auto;
     margin-top: 50px;
 }
 
-.search-box {
-    width: 80%;
-    border: 1px solid #ccc;
-    outline: 0;
-    border-radius: 15px;
+
+.search-box:focus {
+    box-shadow: 0 0 15px 5px #b0e0ee;
+    /*border: 1px solid #bebede;*/
 }
 
-    .search-box:focus {
-        box-shadow: 0 0 15px 5px #b0e0ee;
-        border: 2px solid #bebede;
-    }
-
 .close-icon {
-    border: 1px solid transparent;
+    border: 0px solid transparent;
     background-color: transparent;
     display: inline-block;
     vertical-align: middle;
     outline: 0;
+    margin-right: 0px;
     cursor: pointer;
 }
 
@@ -1352,21 +1405,21 @@ a:hover {
         content: "X";
         display: block;
         width: 15px;
-        height: 20px;
+        height: 16px;
         position: absolute;
-        background-color: #FA9595;
+        background-color: #6ABDBB;
         z-index: 1;
-        right: 35px;
+        right: 15px;
         top: 0;
         bottom: 0;
         margin: auto;
-        padding: 2px;
-        border-radius: 50%;
+        padding: 0px;
+        border-radius: 5%;
         text-align: center;
         color: white;
         font-weight: normal;
         font-size: 12px;
-        box-shadow: 0 0 2px #E50F0F;
+        box-shadow: 0 0 2px #2D3535;
         cursor: pointer;
     }
 

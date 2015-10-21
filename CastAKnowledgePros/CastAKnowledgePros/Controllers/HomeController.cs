@@ -36,7 +36,8 @@ namespace CastAKnowledgePros.Controllers
 
 
             var model = _tempHolder
-                .Where(v => v.VidTitle.ToLower().StartsWith(term.ToLower()))
+                //.Where(v => v.VidTitle.ToLower().StartsWith(term.ToLower()))
+                .Where(v => v.VidTitle.ToLower().Contains(term.ToLower()))
                 .OrderByDescending(i => i.Id)
                 .Take(4)
                 .Select(vd => new
@@ -88,7 +89,8 @@ namespace CastAKnowledgePros.Controllers
                 var _tempHolder = _vidSerice.GetAllVideos();
                 var model = _tempHolder
                     .OrderByDescending(i => i.Id)
-                    .Where(r => searchTerm == null || r.VidTitle.ToLower().StartsWith(searchTerm.ToLower()))
+                    //.Where(r => searchTerm == null || r.VidTitle.ToLower().StartsWith(searchTerm.ToLower()))
+                    .Where(r => searchTerm == null || r.VidTitle.ToLower().Contains(searchTerm.ToLower()))
                     .ToPagedList(page, 4);
                 if (Request.IsAjaxRequest())
                 {

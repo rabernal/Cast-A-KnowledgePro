@@ -3,6 +3,26 @@
 
 $(function () {
 
+    var ajaxFormSubmitReset = function () {
+        var $form = $(this);// this puts the form in a variable
+        // this captures the url, type, data
+        var options = {
+            url: $form.attr("action"),
+            type: "get",
+            data: $form.serialize()
+        };
+        // ajax gets ejecuted with the optios above.. when done (data returned) then we display the new arrived data in the 
+        // target section. 
+        $.ajax(options).done(function (data) {
+            var $target = $($form.attr("data-search-target"));
+            var $newHtml = $(data);
+            $target.replaceWith($newHtml);// we repalced whatever data is already in the div with the new data
+            $newHtml.effect("highlight"); // this adds yellow when searching 
+        });
+
+        return true;
+    };
+
     var ajaxFormSubmitTab = function () {
         var $form = $(this);// this puts the form in a variable
         // this captures the url, type, data
@@ -91,5 +111,6 @@ $(function () {
     //$("input[data-search-autocomplete]").change(submitAutocompleteForm);
     $(".main-content").on("click", ".pagedList a", getPage);// this event helps to display new page.. using a plugin called PagedList NugetPacg 
     $("a[data-tab-ajax='true']").click(ajaxFormSubmitTab);
+    $("button[data-searchReset-ajax='true']").click(ajaxFormSubmitReset);
 
 });
