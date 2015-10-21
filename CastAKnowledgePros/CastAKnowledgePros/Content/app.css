@@ -758,13 +758,14 @@ a:hover {
     background-color: #312626;
 }*/
     .down-button {
-        position: relative;
-        margin-left: 19%;
-        bottom: -480px;
-        width: 61%;
-        padding: 10px;
-        text-align: center;
-        z-index: 1030;
+    position: relative;
+    margin-left: 19%;
+    /* bottom: -480px; */
+    margin-bottom: -88px;
+    width: 61%;
+    padding: 10px;
+    text-align: center;
+    z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -958,13 +959,14 @@ a:hover {
     background-color: #312626;
 }*/
     .down-button {
-        position: relative;
-        margin-left: 19%;
-        bottom: -480px;
-        width: 61%;
-        padding: 10px;
-        text-align: center;
-        z-index: 1030;
+    position: relative;
+    margin-left: 19%;
+    /* bottom: -480px; */
+    margin-bottom: -88px;
+    width: 61%;
+    padding: 10px;
+    text-align: center;
+    z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -1157,13 +1159,14 @@ a:hover {
     background-color: #312626;
 }*/
     .down-button {
-        position: relative;
-        margin-left: 19%;
-        bottom: -480px;
-        width: 61%;
-        padding: 10px;
-        text-align: center;
-        z-index: 1030;
+    position: relative;
+    margin-left: 19%;
+    /* bottom: -480px; */
+    margin-bottom: -88px;
+    width: 61%;
+    padding: 10px;
+    text-align: center;
+    z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
