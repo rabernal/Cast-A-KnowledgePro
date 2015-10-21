@@ -1,15 +1,16 @@
-﻿html{
-    margin:0px;
+﻿html {
+    margin: 0px;
     height: 100%;
     width: 100%;
 }
+
 body {
-    position:relative;
+    position: relative;
     font-family: 'Open Sans', sans-serif;
     color: #987d9d;
     background-color: #f7f7f7;
     margin: 0px;
-
+    font-size: 12px;
 }
 /*this is in use*/
 header {
@@ -86,7 +87,7 @@ a:hover {
     background-size: cover;
     background-position: center;
     /*box-shadow: rgba(0,0,0,0.5) 10px 10px 60px;*/ /*This is extra*/
-    box-shadow: rgb(245, 238, 219)  10px 10px 60px
+    box-shadow: rgb(245, 238, 219) 10px 10px 60px;
 }
 
 /*THIS  MIGHT NEED TO BEE ON A QUERY*/
@@ -197,7 +198,7 @@ a:hover {
         display: none;
     }
 
-    p{
+    p {
         animation: backwards 2s ease-in alternate 3;
     }
 
@@ -271,17 +272,17 @@ a:hover {
         margin: 80px auto;
     }*/
 
-        #carousel img {
-            width: 100%;
-            min-height: 400px;
-            max-height: 400px;
-        }
+    #carousel img {
+        width: 100%;
+        min-height: 400px;
+        max-height: 400px;
+    }
 
 
     #contact-us {
         /*margin: 185px;*/
         text-align: center;
-        box-shadow:rgb(66, 63, 41) 10px 10px 60px;
+        box-shadow: rgb(66, 63, 41) 10px 10px 60px;
     }
 
 
@@ -301,31 +302,43 @@ a:hover {
         }
 
     .col-sm-6:hover + .video-description {
-    background-color: #dce8c0;
-}
-/*******THIS AREA CHANGES THE MAIN ROW SECTION OF THE VIDEO*********/
+        background-color: #dce8c0;
+    }
+    /*******THIS AREA CHANGES THE MAIN ROW SECTION OF THE VIDEO*********/
     .video-background {
-        background-color:#f4f4f4;
-     
+        background-color: #f4f4f4;
         padding-top: 0px;
-        box-shadow: rgb(245, 238, 219)  10px 10px 60px
+        box-shadow: rgb(245, 238, 219) 10px 10px 60px;
     }
 
     .video-description {
-        height: 10.8em;
+        height: 152px;
         color: #167ac6;
-        line-height: 1.3em;
+        /*line-height: 1.3em;*/
         background-color: #fff;
         text-overflow: ellipsis;
-        word-wrap:break-word;
+        word-wrap: break-word;
         border: 1px solid #ddd;
         border-radius: 4px;
         transition: all .5s;
     }
-    .video-description p {
-        margin-top: -7px;
-        margin-bottom: 4px;
-    }
+
+        .video-description p {
+            margin-top: -8px;
+            margin-bottom: 4px;
+            color: black;
+        }
+
+        .video-description h5 {
+            border-bottom: 1px solid #167ac6;
+            font-size: 1.1em;
+            white-space:pre-line;
+            width: 100%;
+            height: 40%;
+            overflow: hidden;
+            margin-top: 0px;
+            text-overflow: ellipsis;
+        }
 
 
         .video-description:hover {
@@ -335,14 +348,14 @@ a:hover {
     /*.video-border-color {
     background-color: #312626;
 }*/
-.down-button {
-position: relative;
-    margin-left: 19%;
-    bottom: -480px;
-    width: 61%;
-    padding: 10px;
-    text-align: center;
-    z-index: 1030;
+    .down-button {
+        position: relative;
+        margin-left: 19%;
+        bottom: -480px;
+        width: 61%;
+        padding: 10px;
+        text-align: center;
+        z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -368,12 +381,11 @@ position: relative;
     }
 
     /*END OF ADVERTISEMENT PAGE*/
-        .row {
+    .row {
         /*background-color: rgba(0,0,0,0.12);*/
-         /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
-         box-shadow: rgb(255, 255, 255) 10px 10px 60px 
-         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
-
+        /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
+        box-shadow: rgb(255, 255, 255) 10px 10px 60px;
+        /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
 }
 
@@ -462,22 +474,22 @@ position: relative;
         font-size: 8px;
     }
 
-        /*CAROUSEL IMAGE MARGING*/
+    /*CAROUSEL IMAGE MARGING*/
     /*#carousel {
         margin: 80px auto;
     }*/
 
-        #carousel img {
-            width: 100%;
-            min-height: 400px;
-            max-height: 400px;
-        }
+    #carousel img {
+        width: 100%;
+        min-height: 400px;
+        max-height: 400px;
+    }
 
 
     #contact-us {
         /*margin: 185px;*/
         text-align: center;
-        box-shadow:rgb(66, 63, 41) 10px 10px 60px;
+        box-shadow: rgb(66, 63, 41) 10px 10px 60px;
     }
 
     .logo {
@@ -491,37 +503,50 @@ position: relative;
         border-radius: 4px;
     }
 
-        /*iframe:hover {
+    /*iframe:hover {
             transform: scale(1.01);
         }*/
 
     .col-sm-6:hover + .video-description {
-    background-color: #dce8c0;
-}
+        background-color: #dce8c0;
+    }
 
-/*******THIS AREA CHANGES THE MAIN ROW SECTION OF THE VIDEO*********/
+    /*******THIS AREA CHANGES THE MAIN ROW SECTION OF THE VIDEO*********/
     .video-background {
-        background-color:#f4f4f4;
-     
+        background-color: #f4f4f4;
         padding-top: 0px;
-        box-shadow: rgb(245, 238, 219)  10px 10px 60px
+        box-shadow: rgb(245, 238, 219) 10px 10px 60px;
     }
 
     .video-description {
-        height: 10.8em;
+        height: 152px;
         color: #167ac6;
-        line-height: 1.3em;
+        /*line-height: 1.3em;*/
         background-color: #fff;
         text-overflow: ellipsis;
-        word-wrap:break-word;
+        word-wrap: break-word;
         border: 1px solid #ddd;
         border-radius: 4px;
         transition: all .5s;
     }
-    .video-description p {
-        margin-top: -7px;
-        margin-bottom: 4px;
-    }
+
+        .video-description p {
+            margin-top: -8px;
+            margin-bottom: 4px;
+            color: black;
+        }
+
+
+        .video-description h5 {
+            border-bottom: 1px solid #167ac6;
+            font-size: 1.1em;
+            white-space:pre-line;
+            width: 100%;
+            height: 40%;
+            overflow: hidden;
+            margin-top: 0px;
+            text-overflow: ellipsis;
+        }
 
 
         .video-description:hover {
@@ -531,14 +556,14 @@ position: relative;
     /*.video-border-color {
     background-color: #312626;
 }*/
-.down-button {
-position: relative;
-    margin-left: 19%;
-    bottom: -480px;
-    width: 61%;
-    padding: 10px;
-    text-align: center;
-    z-index: 1030;
+    .down-button {
+        position: relative;
+        margin-left: 19%;
+        bottom: -480px;
+        width: 61%;
+        padding: 10px;
+        text-align: center;
+        z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -564,12 +589,11 @@ position: relative;
     }
 
     /*END OF ADVERTISEMENT PAGE*/
-        .row {
+    .row {
         /*background-color: rgba(0,0,0,0.12);*/
-         /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
-         box-shadow: rgb(255, 255, 255) 10px 10px 60px 
-         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
-
+        /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
+        box-shadow: rgb(255, 255, 255) 10px 10px 60px;
+        /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
 }
 
@@ -672,7 +696,7 @@ position: relative;
     #contact-us {
         margin: 185px;
         text-align: center;
-        box-shadow:rgb(66, 63, 41) 10px 10px 60px;
+        box-shadow: rgb(66, 63, 41) 10px 10px 60px;
     }
 
 
@@ -692,32 +716,38 @@ position: relative;
         }
 
     .col-sm-6:hover + .video-description {
-    background-color: #dce8c0;
-}
+        background-color: #dce8c0;
+    }
 
-/*******THIS AREA CHANGES THE MAIN ROW SECTION OF THE VIDEO*********/
+    /*******THIS AREA CHANGES THE MAIN ROW SECTION OF THE VIDEO*********/
     .video-background {
-        background-color:#f4f4f4;
-     
+        background-color: #f4f4f4;
         padding-top: 0px;
-        box-shadow: rgb(245, 238, 219)  10px 10px 60px
+        box-shadow: rgb(245, 238, 219) 10px 10px 60px;
     }
 
     .video-description {
-        height: 10.8em;
+        height: 152px;
         color: #167ac6;
-        line-height: 1.3em;
+        /*line-height: 1.3em;*/
         background-color: #fff;
         text-overflow: ellipsis;
-        word-wrap:break-word;
+        word-wrap: break-word;
         border: 1px solid #ddd;
         border-radius: 4px;
         transition: all .5s;
     }
-    .video-description p {
-        margin-top: -7px;
-        margin-bottom: 4px;
-    }
+
+        .video-description p {
+            margin-top: -8px;
+            margin-bottom: 4px;
+            color: black;
+        }
+
+        .video-description h5 {
+            border-bottom: 1px solid #167ac6;
+            font-size: 1.1em;
+        }
 
 
         .video-description:hover {
@@ -727,14 +757,14 @@ position: relative;
     /*.video-border-color {
     background-color: #312626;
 }*/
-.down-button {
-position: relative;
-    margin-left: 19%;
-    bottom: -480px;
-    width: 61%;
-    padding: 10px;
-    text-align: center;
-    z-index: 1030;
+    .down-button {
+        position: relative;
+        margin-left: 19%;
+        bottom: -480px;
+        width: 61%;
+        padding: 10px;
+        text-align: center;
+        z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -761,12 +791,11 @@ position: relative;
     }
 
     /*END OF ADVERTISEMENT PAGE*/
-        .row {
+    .row {
         /*background-color: rgba(0,0,0,0.12);*/
-         /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
-         box-shadow: rgb(255, 255, 255) 10px 10px 60px 
-         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
-
+        /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
+        box-shadow: rgb(255, 255, 255) 10px 10px 60px;
+        /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
 }
 
@@ -867,7 +896,7 @@ position: relative;
     #contact-us {
         margin: 185px;
         text-align: center;
-        box-shadow:rgb(66, 63, 41) 10px 10px 60px;
+        box-shadow: rgb(66, 63, 41) 10px 10px 60px;
     }
 
 
@@ -887,32 +916,38 @@ position: relative;
         }
 
     .col-sm-6:hover + .video-description {
-    background-color: #dce8c0;
-}
+        background-color: #dce8c0;
+    }
 
-/*******THIS AREA CHANGES THE MAIN ROW SECTION OF THE VIDEO*********/
+    /*******THIS AREA CHANGES THE MAIN ROW SECTION OF THE VIDEO*********/
     .video-background {
-        background-color:#f4f4f4;
-     
+        background-color: #f4f4f4;
         padding-top: 0px;
-        box-shadow: rgb(245, 238, 219)  10px 10px 60px
+        box-shadow: rgb(245, 238, 219) 10px 10px 60px;
     }
 
     .video-description {
-        height: 10.8em;
+        height: 152px;
         color: #167ac6;
-        line-height: 1.3em;
+        /*line-height: 1.3em;*/
         background-color: #fff;
         text-overflow: ellipsis;
-        word-wrap:break-word;
+        word-wrap: break-word;
         border: 1px solid #ddd;
         border-radius: 4px;
         transition: all .5s;
     }
-    .video-description p {
-        margin-top: -7px;
-        margin-bottom: 4px;
-    }
+
+        .video-description p {
+            margin-top: -8px;
+            margin-bottom: 4px;
+            color: black;
+        }
+
+        .video-description h5 {
+            border-bottom: 1px solid #167ac6;
+            font-size: 1.1em;
+        }
 
 
         .video-description:hover {
@@ -922,14 +957,14 @@ position: relative;
     /*.video-border-color {
     background-color: #312626;
 }*/
-.down-button {
-position: relative;
-    margin-left: 19%;
-    bottom: -480px;
-    width: 61%;
-    padding: 10px;
-    text-align: center;
-    z-index: 1030;
+    .down-button {
+        position: relative;
+        margin-left: 19%;
+        bottom: -480px;
+        width: 61%;
+        padding: 10px;
+        text-align: center;
+        z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -957,12 +992,11 @@ position: relative;
 
     /*END OF ADVERTISEMENT PAGE*/
 
-        .row {
+    .row {
         /*background-color: rgba(0,0,0,0.12);*/
-         /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
-         box-shadow: rgb(255, 255, 255) 10px 10px 60px 
-         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
-
+        /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
+        box-shadow: rgb(255, 255, 255) 10px 10px 60px;
+        /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
 }
 
@@ -1063,7 +1097,7 @@ position: relative;
     #contact-us {
         margin: 185px;
         text-align: center;
-        box-shadow:rgb(66, 63, 41) 10px 10px 60px;
+        box-shadow: rgb(66, 63, 41) 10px 10px 60px;
     }
 
 
@@ -1083,31 +1117,37 @@ position: relative;
         }
 
     .col-sm-6:hover + .video-description {
-    background-color: #dce8c0;
-}
-/*******THIS AREA CHANGES THE MAIN ROW SECTION OF THE VIDEO*********/
+        background-color: #dce8c0;
+    }
+    /*******THIS AREA CHANGES THE MAIN ROW SECTION OF THE VIDEO*********/
     .video-background {
-        background-color:#f4f4f4;
-     
+        background-color: #f4f4f4;
         padding-top: 0px;
-        box-shadow: rgb(245, 238, 219)  10px 10px 60px
+        box-shadow: rgb(245, 238, 219) 10px 10px 60px;
     }
 
     .video-description {
-        height: 10.8em;
+        height: 152px;
         color: #167ac6;
-        line-height: 1.3em;
+        /*line-height: 1.3em;*/
         background-color: #fff;
         text-overflow: ellipsis;
-        word-wrap:break-word;
+        word-wrap: break-word;
         border: 1px solid #ddd;
         border-radius: 4px;
         transition: all .5s;
     }
-    .video-description p {
-        margin-top: -7px;
-        margin-bottom: 4px;
-    }
+
+        .video-description p {
+            margin-top: -8px;
+            margin-bottom: 4px;
+            color: black;
+        }
+
+        .video-description h5 {
+            border-bottom: 1px solid #167ac6;
+            font-size: 1.1em;
+        }
 
         .video-description:hover {
             background-color: #dce8c0;
@@ -1116,14 +1156,14 @@ position: relative;
     /*.video-border-color {
     background-color: #312626;
 }*/
-.down-button {
-position: relative;
-    margin-left: 19%;
-    bottom: -480px;
-    width: 61%;
-    padding: 10px;
-    text-align: center;
-    z-index: 1030;
+    .down-button {
+        position: relative;
+        margin-left: 19%;
+        bottom: -480px;
+        width: 61%;
+        padding: 10px;
+        text-align: center;
+        z-index: 1030;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -1151,104 +1191,92 @@ position: relative;
     /*END OF ADVERTISEMENT PAGE*/
     .row {
         /*background-color: rgba(0,0,0,0.12);*/
-         /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
-         box-shadow: rgb(255, 255, 255) 10px 10px 60px 
-         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
-
+        /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
+        box-shadow: rgb(255, 255, 255) 10px 10px 60px;
+        /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
-
- 
 }
 /*END OF MEDIA QUERY*/
 
 /*******IMPORTANT THIS IS TO HELP MOBILE LOOK MARGIN ISSUE*******/
 .container-fluid {
-  padding-right: 0px;
-  padding-left: 0px;
-  margin-right: auto;
-  margin-left: auto;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
 }
+
 .row {
-  margin-right: 0px;
-  margin-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 /*THIS IS TO ADD THE X RESET BUTTON*/
-.search-box,.close-icon,.search-wrapper {
-	position: relative;
-	padding: 10px;
+.search-box, .close-icon, .search-wrapper {
+    position: relative;
+    padding: 10px;
 }
+
 .search-wrapper {
-	width: 500px;
-	margin: auto;
-	margin-top: 50px;
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
 }
+
 .search-box {
-	width: 80%;
-	border: 1px solid #ccc;
-  outline: 0;
-  border-radius: 15px;
+    width: 80%;
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: 15px;
 }
-.search-box:focus {
-	box-shadow: 0 0 15px 5px #b0e0ee;
-	border: 2px solid #bebede;
-}
+
+    .search-box:focus {
+        box-shadow: 0 0 15px 5px #b0e0ee;
+        border: 2px solid #bebede;
+    }
+
 .close-icon {
-	border:1px solid transparent;
-	background-color: transparent;
-	display: inline-block;
-	vertical-align: middle;
-  outline: 0;
-  cursor: pointer;
+    border: 1px solid transparent;
+    background-color: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0;
+    cursor: pointer;
 }
-.close-icon:after {
-	content: "X";
-	display: block;
-	width: 15px;
-	height: 20px;
-	position: absolute;
-	background-color: #FA9595;
-	z-index:1;
-	right: 35px;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	padding: 2px;
-	border-radius: 50%;
-	text-align: center;
-	color: white;
-	font-weight: normal;
-	font-size: 12px;
-	box-shadow: 0 0 2px #E50F0F;
-	cursor: pointer;
-}
+
+    .close-icon:after {
+        content: "X";
+        display: block;
+        width: 15px;
+        height: 20px;
+        position: absolute;
+        background-color: #FA9595;
+        z-index: 1;
+        right: 35px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        padding: 2px;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+        font-weight: normal;
+        font-size: 12px;
+        box-shadow: 0 0 2px #E50F0F;
+        cursor: pointer;
+    }
+
 .search-box:not(:valid) ~ .close-icon {
-	display: none;
+    display: none;
 }
 
 
 /***********END************/
 
 
-#myVid{
+#myVid {
     position: relative;
     min-height: 1px;
     padding-right: 1px;
     padding-left: 1px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
