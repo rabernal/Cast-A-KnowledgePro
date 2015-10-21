@@ -3,14 +3,14 @@
 
 @{ var comment = "";}
 <div id="displayVideoList">
-    <section class="col-md-9 col-md-pull-3">
+    <section class="col-xs-12 col-sm-9 col-sm-pull-3" id="myVid">
 
         @foreach (var item in Model)
         {
 
-            <section class="col-sm-12 ">
+            <section class="col-xs-12 col-sm-6 " id="myVid" >
                 @*@item.VidTitle*@
-                <div class="col-sm-6 ">
+                <div class="col-xs-6 col-sm-12" id="myVid">
 
                     <iframe width="100%"
                             height="100%"
@@ -25,7 +25,7 @@
                     comment = item.VidSource.Replace("embed/", "watch?v=");
                 }
 
-                <div class="col-sm-6 video-description">
+                <div class="col-xs-6 col-sm-12 video-description">
                     <header>@item.VidDescription</header><br />
                     <article>
                         <p>Click <b><a href="@comment" target="_blank"><mark>here</mark></a></b> to add a comment</p>

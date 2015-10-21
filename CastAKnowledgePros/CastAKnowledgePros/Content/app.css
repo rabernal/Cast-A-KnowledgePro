@@ -59,7 +59,7 @@ a:hover {
 
 .navbar {
     margin-bottom: 0px;
-    padding: 20px 15px;
+    padding: 25px 15px;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
@@ -76,8 +76,8 @@ a:hover {
 }
 
 .img-responsive {
-    /*margin: 0px;*/
-    margin:auto;
+    margin: 0px;
+    /*margin:auto;*/
     border: 3px thin #9d7d9d;
     box-shadow: rgba(0,0,0,0.5) 10px 10px 60px;
 }
@@ -133,27 +133,27 @@ a:hover {
 
 /* content styles */
 
-.inside {
+/*.inside {
     margin-top: 20px;
     margin-bottom: 20px;
     background: #ededed;
     background: -webkit-gradient(linear, left top, left bottom,color-stop(0%, #f4f4f4), color-stop(100%, #ededed));
     background: -moz-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
     background: -ms-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
-}
+}*/
 
-.inside-full-height {
+/*.inside-full-height {
     /*
   // if you want to give content full height give him height: 100%;
   // with content full height you can't apply margins to the content
   // content full height does not work in ie http://stackoverflow.com/questions/27384433/ie-display-table-cell-child-ignores-height-100
-  */
+  
     height: 100%;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-/* columns of same height styles */
+ columns of same height styles 
 
 .row-height {
     display: table;
@@ -178,8 +178,8 @@ a:hover {
 
 .col-bottom {
     vertical-align: bottom;
-}
-
+}*
+/*/
 @media (min-width: 320px) {
     .nav-search {
         background-color: #64bbb8;
@@ -278,9 +278,10 @@ a:hover {
         }
 
 
-    .contact-us {
-        margin: 185px;
+    #contact-us {
+        /*margin: 185px;*/
         text-align: center;
+        box-shadow:rgb(66, 63, 41) 10px 10px 60px;
     }
 
 
@@ -367,7 +368,13 @@ position: relative;
     }
 
     /*END OF ADVERTISEMENT PAGE*/
+        .row {
+        /*background-color: rgba(0,0,0,0.12);*/
+         /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
+         box-shadow: rgb(255, 255, 255) 10px 10px 60px 
+         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
 
+    }
 }
 
 
@@ -384,9 +391,9 @@ position: relative;
     }
 
     span {
-        display: inline;
-        font-size: 14px;
-        color: #9d7d9d;
+        display: none;
+        /*font-size: 14px;
+        color: #9d7d9d;*/
     }
 
 
@@ -398,17 +405,17 @@ position: relative;
         border-radius: 20px;
         background: rgba(0,0,0,0.24);
         color: whitesmoke;
-        width: 90%;
+        width: 50%;
         height: 2.5em;
         /*border: 1px solid #454545;*/
         height: 0 0 30px;
         /*border: 0px thin #9d7d9d;*/
         /*box-shadow: rgba(0,0,0,0.5) 10px 10px 60px;*/
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        -webkit-transition: all 0.7s ease 0s;
+        /*-webkit-transition: all 0.7s ease 0s;
         -moz-transition: all 0.7s ease 0s;
         -o-transition: all 0.7s ease 0s;
-        transition: all 0.7s ease 0s;
+        transition: all 0.7s ease 0s;*/
     }
 
         #input:hover {
@@ -440,7 +447,7 @@ position: relative;
         -moz-border-radius: 10px;
         border-radius: 10px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        width: 83%;
+        width: 42%;
         color: whitesmoke;
     }
 
@@ -467,11 +474,11 @@ position: relative;
         }
 
 
-    .contact-us {
-        margin: 185px;
+    #contact-us {
+        /*margin: 185px;*/
         text-align: center;
+        box-shadow:rgb(66, 63, 41) 10px 10px 60px;
     }
-
 
     .logo {
         height: 50px;
@@ -479,14 +486,14 @@ position: relative;
     }
 
     iframe {
-        transition: all .5s;
+        /*transition: all .5s;*/
         border: 1px solid #ddd;
         border-radius: 4px;
     }
 
-        iframe:hover {
+        /*iframe:hover {
             transform: scale(1.01);
-        }
+        }*/
 
     .col-sm-6:hover + .video-description {
     background-color: #dce8c0;
@@ -557,7 +564,13 @@ position: relative;
     }
 
     /*END OF ADVERTISEMENT PAGE*/
+        .row {
+        /*background-color: rgba(0,0,0,0.12);*/
+         /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
+         box-shadow: rgb(255, 255, 255) 10px 10px 60px 
+         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
 
+    }
 }
 
 
@@ -656,9 +669,10 @@ position: relative;
         }
 
 
-    .contact-us {
+    #contact-us {
         margin: 185px;
         text-align: center;
+        box-shadow:rgb(66, 63, 41) 10px 10px 60px;
     }
 
 
@@ -747,7 +761,13 @@ position: relative;
     }
 
     /*END OF ADVERTISEMENT PAGE*/
+        .row {
+        /*background-color: rgba(0,0,0,0.12);*/
+         /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
+         box-shadow: rgb(255, 255, 255) 10px 10px 60px 
+         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
 
+    }
 }
 
 
@@ -844,9 +864,10 @@ position: relative;
         }
 
 
-    .contact-us {
-        margin: 178px;
+    #contact-us {
+        margin: 185px;
         text-align: center;
+        box-shadow:rgb(66, 63, 41) 10px 10px 60px;
     }
 
 
@@ -936,7 +957,13 @@ position: relative;
 
     /*END OF ADVERTISEMENT PAGE*/
 
+        .row {
+        /*background-color: rgba(0,0,0,0.12);*/
+         /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
+         box-shadow: rgb(255, 255, 255) 10px 10px 60px 
+         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
 
+    }
 }
 
 
@@ -1033,9 +1060,10 @@ position: relative;
         }
 
 
-    .contact-us {
-        margin: 200px;
+    #contact-us {
+        margin: 185px;
         text-align: center;
+        box-shadow:rgb(66, 63, 41) 10px 10px 60px;
     }
 
 
@@ -1124,7 +1152,9 @@ position: relative;
     .row {
         /*background-color: rgba(0,0,0,0.12);*/
          /*box-shadow: rgb(245, 238, 219)  10px 10px 60px*/
-         box-shadow:rgb(66, 63, 41) 10px 10px 60px;
+         box-shadow: rgb(255, 255, 255) 10px 10px 60px 
+         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
+
     }
 
  
@@ -1143,7 +1173,7 @@ position: relative;
   margin-left: 0px;
 }
 
-
+/*THIS IS TO ADD THE X RESET BUTTON*/
 .search-box,.close-icon,.search-wrapper {
 	position: relative;
 	padding: 10px;
@@ -1200,7 +1230,12 @@ position: relative;
 /***********END************/
 
 
-
+#myVid{
+    position: relative;
+    min-height: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+}
 
 
 

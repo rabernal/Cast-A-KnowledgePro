@@ -18,44 +18,48 @@
         <form method="get" action="@Url.Action("VideoIndex")"
               data-search-ajax="true" data-search-target="#displayVideoList">
 
-            <span id="spanSearch">Search Videos:</span> <input type="search" name="searchTerm" @*class="mySearch"*@ id="input"
+            <span id="spanSearch">Search Videos:</span> <input type="text" name="searchTerm" class="search-box" id="input"
                                                                size="40" placeholder="  Search..." data-search-autocomplete="@Url.Action("AutoComplete")" />
+            <button class="close-icon" type="reset"></button>
+
         </form>
+
+
     </section>
-
-
-
 
 
     @*main-content class is used to assist the pager to diplay an ajax request.*@
     <section class="main-content container-fluid">
-        <section class="row ">
-            <div class="pagedList" data-search-target="#displayVideoList">
-                @Html.PagedListPager(Model, page => Url.Action("VideoIndex", new { page, pageSize = Model.PageSize }),
-                PagedListRenderOptions.TwitterBootstrapPagerAligned)
-            </div>
+            <section class="row ">
+                <div class="pagedList" data-search-target="#displayVideoList">
+                    @Html.PagedListPager(Model, page => Url.Action("VideoIndex", new { page, pageSize = Model.PageSize }),
+                    PagedListRenderOptions.TwitterBootstrapPagerAligned)
+                </div>
+            </section>
         </section>
-    </section>
 
     <div class="container-fluid">
         <ul class="nav nav-tabs ">
-            <li class="active"><a  data-toggle="tab" data-search-target="#displayVideoList" data-tab-ajax='true' href="#All" action="@Url.Action("VideoIndex")">All</a></liclass="active">
+            <li><a data-toggle="tab" data-search-target="#displayVideoList" data-tab-ajax='true' href="#All" action="@Url.Action("VideoIndex")">All</a></liclass="active">
             <li><a data-toggle="tab" data-search-target="#displayVideoList" data-tab-ajax='true' href="#How-to" action="@Url.Action("VideoIndex", new { pageSection = "How-to"})">How-to</a></li>
             <li><a data-toggle="tab" data-search-target="#displayVideoList" data-tab-ajax='true' href="#Troubleshoot" action="@Url.Action("VideoIndex", new { pageSection = "Troubleshoot"})">Throubleshoot</a></li>
             <li><a data-toggle="tab" data-search-target="#displayVideoList" data-tab-ajax='true' href="#Spanish" action="@Url.Action("VideoIndex", new { pageSection = "Espanol"})">Spanish</a></li>
         </ul>
 
+
+
+
+
         <div class="tab-content">
             <div id="All" class="tab-pane fade in active">
-                <h4>All Videos</h4>
                 @*This is where we start the videos section*@
-                <aside class="container-fluid col-md-3 col-md-push-9">
+                <aside class="container-fluid hidden-xs  col-sm-3 col-sm-push-9">
                     @*Partial view was added for advertisement*@
                     @Html.Partial("_Advertisement");
                 </aside>
-                    @*Partial was added to make the ajax request*@
-                    @Html.Partial("_VideoList", Model)
-                
+                @*Partial was added to make the ajax request*@
+                @Html.Partial("_VideoList", Model)
+
             </div>
         </div>
     </div>
