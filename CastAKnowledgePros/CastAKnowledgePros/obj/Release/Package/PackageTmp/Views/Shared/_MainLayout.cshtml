@@ -10,14 +10,14 @@
     <meta charset="utf-8" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0; m">
     <title>@ViewBag.Title - My Video's Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 
 </head>
-<body>
+<body >
     @*nav color was change in bootstrap.css line 4639*@
 
 
@@ -44,9 +44,9 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#top">Home</a></li>
-                        <li><a href="#sights">Sights</a></li>
-                        <li><a href="#sports">Sports</a></li>
+                        <li><a href="#aboutus">About Us</a></li>
                         <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#media">Media</a></li>             
                         <li><a href="#contact-us">Contact Us</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -75,9 +75,9 @@
                     <div class="item active">
                         <img class="img-responsive" src="../../images/horn.jpg" alt="Clouds with volcano" data-stellar-background-ratio=" 0.2">
                         <div class="carousel-caption">
-                            <h3 class="wow zoomInDown">Cloud and a Volcano</h3>
+                            <h3 class="wow zoomInDown">Find Useful Tutorials</h3>
                             <p class="wow zoomInDown">
-                                This is a beautifull display of a cloud and a pick of a volcano
+                                Looking to learn something new, this is the place for you
                             </p>
                             @*<img class="img-responsive title-image" src="~/images/log.png" alt="this is s temp image" />*@
                         </div>
@@ -85,16 +85,16 @@
                     <div class="item">
                         <img class="img-responsive" src="../../images/oldTV.jpg" alt="Foggy Image">
                         <div class="carousel-caption">
-                            <h3 class="wow bounceInDown">Foggy Day</h3>
-                            <p class="wow bounceInDown">This is a beautifull display shows a paridise of a place where one can let the toughts fly</p>
+                            <h3 class="wow bounceInDown">Please Vist my YouTube Channel</h3>
+                            <p class="wow bounceInDown">You will find usefull video tutorias that can help fix and issue and learn something new</p>
                         </div>
                     </div>
 
                     <div class="item ">
                         <img class="img-responsive" src="../../images/porteria.jpg" alt="Eagle in the foggy mountain">
                         <div class="carousel-caption">
-                            <h3 class="wow bounceInDown">Eagle in the foggy mountain</h3>
-                            <p class="wow bounceInDown">This is a beautifull display that shows an eable flying arround in a foggy mountain</p>
+                            <h3 class="wow bounceInDown">Are you a beginner?</h3>
+                            <p class="wow bounceInDown">I you are a college student an need ideas for capstone project? this is the reigh place for you</p>
                         </div>
                     </div>
 
@@ -114,7 +114,7 @@
         </section>
     </section>
 
-    <section id="sights" class="row">
+    <section id="aboutus" class="row">
         <h2 class="welcomeTitle">WELCOME TO CAST-A-KNOWLEGE!!</h2>
         <div class="text-banner">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,ed do eiusmod tempor incididunt ut labore,
@@ -125,8 +125,9 @@
     </section>
 
 
-    <section id="sports" class="row">
-        <div class="fill-screen fixed-attachment" style="height: 400px; background-image: url(../../images/flowersFog.jpg)" >
+    <section id="media" class="row">
+        <div class="fill-screen fixed-attachment background-image-size " style="background-image: url(../../images/flowersFog.jpg)" >
+            
         </div>
     </section>
 
@@ -150,15 +151,12 @@
             <h3>@ViewBag.Message</h3>
 
             <address>
-                One Microsoft Way<br />
-                Redmond, WA 98052-6399<br />
-                <abbr title="Phone">P:</abbr>
-                425.555.0100
+                For suggestions and comments
+                Visit YouTube Channel<br />
             </address>
 
             <address>
-                <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-                <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+                <strong>YouTube Channel:</strong><a href="https://www.youtube.com/channel/UCy6cI5xNGTsNDC26InDI0Tg/videos?view_as=public" target="_blank"><i><img src="~/images/YouTube-social-square_red_24px.png" /></i></a><br />
             </address>
 
         </section>

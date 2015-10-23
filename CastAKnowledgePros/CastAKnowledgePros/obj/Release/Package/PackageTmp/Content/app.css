@@ -10,7 +10,7 @@ body {
     color: #987d9d;
     background-color: #f7f7f7;
     margin: 0px;
-    font-size: 12px;
+    font-size: 16px;
 }
 /*this is in use*/
 header {
@@ -130,6 +130,14 @@ a:hover {
     }
 }
 
+/*.background-image-size {
+    color: #FFFFFF;
+    width: 100%;
+    height:400px;
+    background: transparent;
+    background-image: linear-gradient(#8b9da9, #fff6e4);
+    box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
+}*/
 /*END OF THE PARALAX SCROLLING*/
 
 /* content styles */
@@ -181,6 +189,17 @@ a:hover {
     vertical-align: bottom;
 }*
 /*/
+
+/*THIS IS CENTERS THE <li> IN THE MIDDLE*/
+.nav > li {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+/*END*/
+
+
+
 @media (min-width: 320px) {
     .nav-search {
         background-color: #64bbb8;
@@ -189,6 +208,10 @@ a:hover {
         /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     }
 
+    .background-image-size {
+        width: 100%;
+        height: 400px;
+    }
     /*span {
         display: inline;
         font-size: 14px;
@@ -251,6 +274,7 @@ a:hover {
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         width: 83%;
         color: whitesmoke;
+        font-size: 16px;
     }
 
         .ui-autocomplete.source:hover {
@@ -277,9 +301,10 @@ a:hover {
 
 
     #contact-us {
-        /*margin: 185px;*/
-        text-align: center;
+        margin: 24% 3%;
+        text-align: left;
         box-shadow: rgb(66, 63, 41) 10px 10px 60px;
+        padding: 10px;
     }
 
 
@@ -324,11 +349,12 @@ a:hover {
             margin-top: -8px;
             margin-bottom: 4px;
             color: black;
+            font-size: .7em;
         }
 
         .video-description h5 {
             border-bottom: 1px solid #167ac6;
-            font-size: 1.1em;
+            font-size: .85em;
             white-space: pre-line;
             width: 100%;
             height: 40%;
@@ -347,12 +373,13 @@ a:hover {
 }*/
     .down-button {
         position: relative;
-        margin-left: 19%;
-        bottom: -480px;
-        width: 61%;
-        padding: 10px;
+        margin-left: 43.5%;
+        bottom: -455px;
+        width: 12%;
+        padding: 0px;
         text-align: center;
         z-index: 1030;
+        display: none;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
 
@@ -387,7 +414,7 @@ a:hover {
     .welcomeTitle {
         margin-top: 56px;
         text-align: center;
-        font-size: 1.7em;
+        font-size: 1.4em;
     }
 
     /*END OF START UP PAGE*/
@@ -408,16 +435,15 @@ a:hover {
     }
 
     .search-box {
-        /*background: transparent;*/
+        /* background: transparent; */
         border: 0;
         display: inline-block;
         font-size: 16px;
         height: 100%;
         left: 0;
         margin: 0;
+        margin-left: 2px;
         outline: none;
-        /*padding: 2px 6px;
-        position: relative;*/
         width: 98%;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -437,7 +463,10 @@ a:hover {
         /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     }
 
-
+    .background-image-size {
+        width: 100%;
+        height: 400px;
+    }
 
 
 
@@ -517,10 +546,12 @@ a:hover {
     }
 
 
+
     #contact-us {
-        /*margin: 185px;*/
-        text-align: center;
+        margin: 24% 3%;
+        text-align: left;
         box-shadow: rgb(66, 63, 41) 10px 10px 60px;
+        padding: 10px;
     }
 
     .logo {
@@ -565,12 +596,13 @@ a:hover {
             margin-top: -8px;
             margin-bottom: 4px;
             color: black;
+            font-size: .8em;
         }
 
 
         .video-description h5 {
             border-bottom: 1px solid #167ac6;
-            font-size: 1.1em;
+            font-size: .9em;
             white-space: pre-line;
             width: 100%;
             height: 40%;
@@ -589,12 +621,13 @@ a:hover {
 }*/
     .down-button {
         position: relative;
-        margin-left: 19%;
-        bottom: -480px;
-        width: 61%;
-        padding: 10px;
+        margin-left: 43.5%;
+        bottom: -455px;
+        width: 12%;
+        padding: 0px;
         text-align: center;
         z-index: 1030;
+        display: none;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -627,7 +660,8 @@ a:hover {
 
     .welcomeTitle {
         text-align: center;
-        font-size: 2.4em;
+        font-size: 1.8em;
+        margin-top: 40px;
     }
 
     /*END OF START UP PAGE*/
@@ -648,16 +682,15 @@ a:hover {
     }
 
     .search-box {
-        /*background: transparent;*/
+        /* background: transparent; */
         border: 0;
         display: inline-block;
         font-size: 16px;
         height: 100%;
         left: 0;
         margin: 0;
+        margin-left: 5px;
         outline: none;
-        /*padding: 2px 6px;
-        position: relative;*/
         width: 98%;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -675,7 +708,10 @@ a:hover {
         /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     }
 
-
+    .background-image-size {
+        width: 100%;
+        height: 400px;
+    }
 
 
     /*---------------------Search*/
@@ -755,10 +791,12 @@ a:hover {
         }
 
 
+
     #contact-us {
-        margin: 185px;
-        text-align: center;
+        margin: 15% 10%;
+        text-align: left;
         box-shadow: rgb(66, 63, 41) 10px 10px 60px;
+        padding: 10px;
     }
 
 
@@ -804,11 +842,12 @@ a:hover {
             margin-top: -8px;
             margin-bottom: 4px;
             color: black;
+            font-size: .8em;
         }
 
         .video-description h5 {
             border-bottom: 1px solid #167ac6;
-            font-size: 1.1em;
+            font-size: .9em;
         }
 
 
@@ -821,13 +860,14 @@ a:hover {
 }*/
     .down-button {
         position: relative;
-        margin-left: 19%;
+        margin-left: 45%;
         /* bottom: -480px; */
-        margin-bottom: -88px;
-        width: 61%;
-        padding: 10px;
+        margin-bottom: -90px;
+        width: 10%;
+        padding: 1px 1px;
         text-align: center;
         z-index: 1030;
+        display:block;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -860,7 +900,8 @@ a:hover {
 
     .welcomeTitle {
         text-align: center;
-        font-size: 2.4em;
+        font-size: 1.5em;
+        margin-top: 1px;
     }
 
     /*END OF START UP PAGE*/
@@ -881,7 +922,7 @@ a:hover {
         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
 
-        .search-box {
+    .search-box {
         /*background: transparent;*/
         border: 0;
         display: inline-block;
@@ -909,7 +950,10 @@ a:hover {
         /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     }
 
-
+    .background-image-size {
+        width: 100%;
+        height: 400px;
+    }
 
 
     /*-------------------------search*/
@@ -987,10 +1031,12 @@ a:hover {
         }
 
 
+
     #contact-us {
-        margin: 185px;
-        text-align: center;
+        margin: 14% 10%;
+        text-align: left;
         box-shadow: rgb(66, 63, 41) 10px 10px 60px;
+        padding: 10px;
     }
 
 
@@ -1053,13 +1099,13 @@ a:hover {
 }*/
     .down-button {
         position: relative;
-        margin-left: 19%;
-        /* bottom: -480px; */
-        margin-bottom: -88px;
-        width: 61%;
-        padding: 10px;
+        margin-left: 46.7%;
+        margin-bottom: -90px;
+        width: 6%;
+        padding: 1px;
         text-align: center;
         z-index: 1030;
+        display:block;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -1092,7 +1138,8 @@ a:hover {
 
     .welcomeTitle {
         text-align: center;
-        font-size: 2.4em;
+        font-size: 2em;
+        margin-top: 1px;
     }
     /*END OF START UP PAGE*/
 
@@ -1113,7 +1160,7 @@ a:hover {
         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
 
-        .search-box {
+    .search-box {
         /*background: transparent;*/
         border: 0;
         display: inline-block;
@@ -1141,7 +1188,10 @@ a:hover {
         /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     }
 
-
+    .background-image-size {
+        width: 100%;
+        height: 400px;
+    }
 
     /*--------------------------------------------*/
 
@@ -1219,12 +1269,13 @@ a:hover {
         }
 
 
-    #contact-us {
-        margin: 185px;
-        text-align: center;
-        box-shadow: rgb(66, 63, 41) 10px 10px 60px;
-    }
 
+    #contact-us {
+        margin: 10% 15%;
+        text-align: left;
+        box-shadow: rgb(66, 63, 41) 10px 10px 60px;
+        padding: 10px;
+    }
 
     .logo {
         height: 50px;
@@ -1271,7 +1322,7 @@ a:hover {
 
         .video-description h5 {
             border-bottom: 1px solid #167ac6;
-            font-size: 1.1em;
+            font-size: 1em;
         }
 
         .video-description:hover {
@@ -1283,13 +1334,13 @@ a:hover {
 }*/
     .down-button {
         position: relative;
-        margin-left: 19%;
-        /* bottom: -480px; */
-        margin-bottom: -88px;
-        width: 61%;
-        padding: 10px;
+        margin-left: 46.7%;
+        margin-bottom: -95px;
+        width: 6%;
+        padding: 1px;
         text-align: center;
         z-index: 1030;
+        display:block;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -1317,12 +1368,13 @@ a:hover {
         }*/
 
         .text-banner p {
-            font-size: 1.3em;
+            font-size: 1em;
         }
 
     .welcomeTitle {
         text-align: center;
-        font-size: 2.4em;
+        font-size: 2em;
+        margin-top: 1px;
     }
 
     /*END OF START UP PAGE*/
@@ -1342,7 +1394,7 @@ a:hover {
         /*box-shadow:rgb(66, 63, 41) 10px 10px 60px;*/
     }
 
-        .search-box {
+    .search-box {
         /*background: transparent;*/
         border: 0;
         display: inline-block;
@@ -1376,7 +1428,7 @@ a:hover {
 /*THIS IS TO ADD THE X RESET BUTTON and FORMATING TO SEARCH FIELD*/
 .search-box, .close-icon, .search-wrapper {
     position: relative;
-    padding: .3em 0;
+    padding: .4em 0;
 }
 
 .search-wrapper {

@@ -11,11 +11,26 @@
 
     // smooth scrolling
     $('nav a, .down-button a').bind('click', function () {
-        $('html, body').stop().animate({
-            scrollTop: $($(this).attr('href')).offset().top -60
-        }, 1500, 'easeInOutExpo');
         event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: $($(this).attr('href')).offset().top - 60
+        }, 1400, 'easeOutSine');
+        
     });
+
+        //$('a[href*=#]:not([href=#])').click(function () {
+        //    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        //        var target = $(this.hash);
+        //        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        //        if (target.length) {
+        //            $('html,body').animate({
+        //                scrollTop: target.offset().top
+        //            }, 1400);
+        //            return false;
+        //        }
+        //    }
+        //});
+  
 
     // parallax scrolling with stellar.js
 

@@ -189,6 +189,17 @@ a:hover {
     vertical-align: bottom;
 }*
 /*/
+
+/*THIS IS CENTERS THE <li> IN THE MIDDLE*/
+.nav > li {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+/*END*/
+
+
+
 @media (min-width: 320px) {
     .nav-search {
         background-color: #64bbb8;
@@ -290,9 +301,10 @@ a:hover {
 
 
     #contact-us {
-        margin: 24%;
-        text-align: center;
+        margin: 24% 3%;
+        text-align: left;
         box-shadow: rgb(66, 63, 41) 10px 10px 60px;
+        padding: 10px;
     }
 
 
@@ -361,12 +373,13 @@ a:hover {
 }*/
     .down-button {
         position: relative;
-        margin-left: 39.5%;
-        bottom: -375px;
-        width: 20%;
-        padding: 1px;
+        margin-left: 43.5%;
+        bottom: -455px;
+        width: 12%;
+        padding: 0px;
         text-align: center;
         z-index: 1030;
+        display: none;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
 
@@ -533,10 +546,12 @@ a:hover {
     }
 
 
+
     #contact-us {
-        margin: 19%;
-        text-align: center;
+        margin: 24% 3%;
+        text-align: left;
         box-shadow: rgb(66, 63, 41) 10px 10px 60px;
+        padding: 10px;
     }
 
     .logo {
@@ -612,6 +627,7 @@ a:hover {
         padding: 0px;
         text-align: center;
         z-index: 1030;
+        display: none;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -775,10 +791,12 @@ a:hover {
         }
 
 
+
     #contact-us {
-        margin: 14%;
-        text-align: center;
+        margin: 15% 10%;
+        text-align: left;
         box-shadow: rgb(66, 63, 41) 10px 10px 60px;
+        padding: 10px;
     }
 
 
@@ -844,11 +862,12 @@ a:hover {
         position: relative;
         margin-left: 45%;
         /* bottom: -480px; */
-        margin-bottom: -60px;
+        margin-bottom: -90px;
         width: 10%;
         padding: 1px 1px;
         text-align: center;
         z-index: 1030;
+        display:block;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -1012,10 +1031,12 @@ a:hover {
         }
 
 
+
     #contact-us {
-        margin: 11%;
-        text-align: center;
+        margin: 14% 10%;
+        text-align: left;
         box-shadow: rgb(66, 63, 41) 10px 10px 60px;
+        padding: 10px;
     }
 
 
@@ -1079,11 +1100,12 @@ a:hover {
     .down-button {
         position: relative;
         margin-left: 46.7%;
-        margin-bottom: -55px;
+        margin-bottom: -90px;
         width: 6%;
         padding: 1px;
         text-align: center;
         z-index: 1030;
+        display:block;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
@@ -1247,12 +1269,13 @@ a:hover {
         }
 
 
-    #contact-us {
-        margin: 10.5%;
-        text-align: center;
-        box-shadow: rgb(66, 63, 41) 10px 10px 60px;
-    }
 
+    #contact-us {
+        margin: 10% 15%;
+        text-align: left;
+        box-shadow: rgb(66, 63, 41) 10px 10px 60px;
+        padding: 10px;
+    }
 
     .logo {
         height: 50px;
@@ -1312,11 +1335,12 @@ a:hover {
     .down-button {
         position: relative;
         margin-left: 46.7%;
-        margin-bottom: -55px;
+        margin-bottom: -95px;
         width: 6%;
         padding: 1px;
         text-align: center;
         z-index: 1030;
+        display:block;
     }
     /*THIS PORTION IS FOR THE TEXT IN THE START UP PAGE*/
     .text-banner {
