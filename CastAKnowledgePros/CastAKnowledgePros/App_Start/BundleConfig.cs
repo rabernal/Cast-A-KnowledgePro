@@ -27,12 +27,12 @@ namespace CastAKnowledgePros
                         "~/Scripts/jquery.easing.1.3.js",
                         "~/Scripts/wow.min.js",
                         "~/Scripts/jquery.nanogallery.min.js",
-                        "~/Scripts/scrolling.js",
                         "~/Scripts/jquery.stellar.js",
                         "~/Scripts/respond.js",
                         "~/Scripts/cbpAnimatedHeader.js",
                         "~/Scripts/nav.js",
-                        "~/Scripts/displayVideos.js"
+                        "~/Scripts/displayVideos.js",
+                        "~/Scripts/scrolling.js"
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(

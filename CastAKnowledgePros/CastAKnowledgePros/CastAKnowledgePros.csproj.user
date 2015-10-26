@@ -8,6 +8,7 @@
     <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_LayoutPageVideos.cshtml</WebStackScaffolding_LayoutPageFile>
     <WebStackScaffolding_DbContextTypeFullName>CastAKnowledgePros.Models.CAKnowledgeDB</WebStackScaffolding_DbContextTypeFullName>
     <NameOfLastUsedPublishProfile>Cast-A-Knowledge - Web Deploy</NameOfLastUsedPublishProfile>
+    <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
