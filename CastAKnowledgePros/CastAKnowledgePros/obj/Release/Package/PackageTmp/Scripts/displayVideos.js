@@ -3,6 +3,10 @@
 
 $(function () {
 
+
+
+
+
     var ajaxFormSubmitReset = function () {
         var $form = $(this);// this puts the form in a variable
         // this captures the url, type, data
@@ -114,3 +118,4 @@ $(function () {
     $("button[data-searchReset-ajax='true']").click(ajaxFormSubmitReset);
 
 });
+

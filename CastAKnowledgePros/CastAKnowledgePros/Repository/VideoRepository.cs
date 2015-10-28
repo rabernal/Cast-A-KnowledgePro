@@ -5,6 +5,10 @@ using System.Linq;
 using System.Web;
 using CastAKnowledgePros.Models;
 using System.Data.Entity;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+using Dapper;
 
 namespace CastAKnowledgePros.Repository
 {
@@ -12,6 +16,8 @@ namespace CastAKnowledgePros.Repository
     {
         //private ApplicationDbContext _db;
         private CAKnowledgeDB _db;
+        //private IDbConnection _db2 = new SqlConnection
+        //    (ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
 
         //private List<VideoModel> results = new List<VideoModel>();
 
@@ -39,11 +45,18 @@ namespace CastAKnowledgePros.Repository
 
         public List<VideoModel> GetAllVideos()
         {
+            //var connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+
+            //IDbConnection _myDB = new SqlConnection(connectionString);
+            //var allVids = _myDB.Query<VideoModel>("Select * from VideoModel");
+
+            //using (var getAllVidsFromStrProc = _this.db.Query<VideoModel>("GetAllVideosProc", new {Id = id }, CommandType.StoredProcedure){ }
+
             var allVideosList = new List<VideoModel>();
 
             //return allVideosList = _db.VideoModels.ToList();
             return allVideosList = _db.MyVideos.ToList();
-            
+
         }
 
         public void SaveChanges()
@@ -66,26 +79,34 @@ namespace CastAKnowledgePros.Repository
             _db.MyVideos.Remove(removeVid);
         }
 
-        public List<VideoModel> GetPageEnglish(string pageSection)
+        public IQueryable<VideoModel> GetPageEnglish(string pageSection)
         {
-            var allVideosList = _db.MyVideos.ToList();
-            var model = allVideosList
-                .OrderByDescending(i => i.Id)
-                .Where(t => t.VidCategory.ToLower().StartsWith(pageSection.ToLower()));
-            //return allVideosList = _db.VideoModels.ToList();
-            return model.ToList();
+            //var allVideosList = _db.MyVideos;
+            //var model = allVideosList
+            //    .OrderByDescending(i => i.Id)
+            //    .Where(t => t.VidCategory.ToLower().StartsWith(pageSection.ToLower()));
+            ////return allVideosList = _db.VideoModels.ToList();
+            //return model;
+
+            var model = _db.MyVideos.OrderByDescending(i => i.Id)
+                                    .Where(t => t.VidCategory.ToLower().StartsWith(pageSection.ToLower()));
+            return model;
+
         }
 
-        public List<VideoModel> GetPageSpanish(string pageSection)
+        public IQueryable<VideoModel> GetPageSpanish(string pageSection)
         {
-            var allVideosList = _db.MyVideos.ToList();
+            //var allVideosList = _db.MyVideos;
 
-            //return allVideosList = _db.VideoModels.ToList();
-            var model = allVideosList
-                .OrderByDescending(i => i.Id)
-                .Where(t => t.VidLanguage.ToLower().StartsWith(pageSection.ToLower()));
-            //return allVideosList = _db.VideoModels.ToList();
-            return model.ToList();
+            ////return allVideosList = _db.VideoModels.ToList();
+            //var model = allVideosList
+            //    .OrderByDescending(i => i.Id)
+            //    .Where(t => t.VidLanguage.ToLower().StartsWith(pageSection.ToLower()));
+            ////return allVideosList = _db.VideoModels.ToList();
+            //return model;
+            var model = _db.MyVideos.OrderByDescending(i => i.Id)
+                        .Where(t => t.VidLanguage.ToLower().StartsWith(pageSection.ToLower()));
+            return model;
         }
     }
 }

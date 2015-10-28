@@ -33,32 +33,34 @@ namespace CastAKnowledgePros
         [WebMethod(Description = "Gets all the videos from db", EnableSession = true)]
         public List<VideoModel> GetAllVideos()
         {
-            var models = _getAllVidsFromIVideoRepository.GetAllVideos().ToList();
+            var models = _getAllVidsFromIVideoRepository.GetAllVideos();
 
             // here is where you put a message stating that no videos were return. a redirect page.   
             return models;
         }
-
+        [WebMethod(Description = "Gets all page width vid category English", EnableSession = true)]
         public List<VideoModel> GetPageEnglish(string pageSection)
         {
             var allVideosList = _getAllVidsFromIVideoRepository.GetPageEnglish(pageSection);
-            var model = allVideosList
-                .OrderByDescending(i => i.Id)
-                .Where(t => t.VidCategory.ToLower().StartsWith(pageSection.ToLower()));
-            //return allVideosList = _db.VideoModels.ToList();
-            return model.ToList();
+            //var model = allVideosList
+            //    .OrderByDescending(i => i.Id)
+            //    .Where(t => t.VidCategory.ToLower().StartsWith(pageSection.ToLower()));
+            ////return allVideosList = _db.VideoModels.ToList();
+            //return model.ToList();
+            return allVideosList.ToList();
         }
-
+        [WebMethod(Description = "Gets all page width vid category Espanol", EnableSession = true)]
         public List<VideoModel> GetPageSpanish(string pageSection)
         {
             var allVideosList = _getAllVidsFromIVideoRepository.GetPageSpanish(pageSection);
 
-            //return allVideosList = _db.VideoModels.ToList();
-            var model = allVideosList
-                .OrderByDescending(i => i.Id)
-                .Where(t => t.VidLanguage.ToLower().StartsWith(pageSection.ToLower()));
-            //return allVideosList = _db.VideoModels.ToList();
-            return model.ToList();
+            ////return allVideosList = _db.VideoModels.ToList();
+            //var model = allVideosList
+            //    .OrderByDescending(i => i.Id)
+            //    .Where(t => t.VidLanguage.ToLower().StartsWith(pageSection.ToLower()));
+            ////return allVideosList = _db.VideoModels.ToList();
+            //return model.ToList();
+            return allVideosList.ToList();
         }
 
         [WebMethod(Description = "Creates a new video and adds to db")]

@@ -160,3 +160,6 @@
 \\psf\Home\Desktop\GitHub\Cast-A-KnowledgePro\CastAKnowledgePros\CastAKnowledgePros\obj\Debug\CastAKnowledgePros.csproj.GenerateResource.Cache
 \\psf\Home\Desktop\GitHub\Cast-A-KnowledgePro\CastAKnowledgePros\CastAKnowledgePros\obj\Debug\CastAKnowledgePros.dll
 \\psf\Home\Desktop\GitHub\Cast-A-KnowledgePro\CastAKnowledgePros\CastAKnowledgePros\obj\Debug\CastAKnowledgePros.pdb
+\\psf\Home\Desktop\GitHub\Cast-A-KnowledgePro\CastAKnowledgePros\CastAKnowledgePros\bin\Dapper.dll
+\\psf\Home\Desktop\GitHub\Cast-A-KnowledgePro\CastAKnowledgePros\CastAKnowledgePros\bin\Dapper.pdb
+\\psf\Home\Desktop\GitHub\Cast-A-KnowledgePro\CastAKnowledgePros\CastAKnowledgePros\bin\Dapper.xml

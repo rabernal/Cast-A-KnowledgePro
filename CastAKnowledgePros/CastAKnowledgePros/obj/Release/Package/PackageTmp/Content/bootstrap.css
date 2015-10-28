@@ -2889,6 +2889,7 @@ th {
 .table {
     width: 100%;
     max-width: 100%;
+    margin-top: 20px; /*this was added by me*/
     margin-bottom: 20px;
 }
 
@@ -5678,8 +5679,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
     .navbar-inverse .navbar-brand {
-        color: darkblue;
+        /*color: darkblue;*/
         /*color: #9d9d9d;*/
+        color: rgba(162, 241, 233, 0.73);
     }
 
         .navbar-inverse .navbar-brand:hover,

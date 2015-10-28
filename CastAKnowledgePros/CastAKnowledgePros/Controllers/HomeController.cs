@@ -28,7 +28,8 @@ namespace CastAKnowledgePros.Controllers
         {
             //_getAllVidsFromIVideoRepository = myDb;
         }// parameterless constructor
-
+        //[ChildActionOnly]
+        //[OutputCache(CacheProfile = "Short")]
         public ActionResult AutoComplete(string term)
         {
 
@@ -61,17 +62,17 @@ namespace CastAKnowledgePros.Controllers
         //    return View(model.ToList());
         //}
 
-
+        [OutputCache(CacheProfile ="Long", VaryByHeader = "X-Requested-With", Location = System.Web.UI.OutputCacheLocation.Server)]
         public ActionResult VideoIndex(string pageSection, string searchTerm = null, int page = 1)
         {
-
+            
+            
             if (pageSection != null && Request.IsAjaxRequest())
             {
                 if (pageSection.ToLower() == "espanol")
                 {
                     var _temp = _vidSerice.GetPageSpanish(pageSection);
                     var model = _temp
-                        .OrderByDescending(i => i.Id)
                         .ToPagedList(page, 4);
                     return PartialView("_VideoList", model);
                 }
@@ -79,7 +80,6 @@ namespace CastAKnowledgePros.Controllers
                 {
                     var _temp = _vidSerice.GetPageEnglish(pageSection);
                     var model = _temp
-                        .OrderByDescending(i => i.Id)
                         .ToPagedList(page, 4);
                     return PartialView("_VideoList", model);
                 }
@@ -100,46 +100,52 @@ namespace CastAKnowledgePros.Controllers
             }
 
         }// end of video index
+        [Authorize]
+        public ActionResult Admin()
+        {
+            var model = _vidSerice.GetAllVideos();
+            return View(model);
+        }
 
         // GET: Video
-        public ActionResult Index(string searchTerm = null, int page = 1)
+        //public ActionResult Index(string searchTerm = null, int page = 1)
 
-        {
-            //var model = _db.MyVideos.ToList();
-            //return View(model);
-
-
-            var _tempHolder = _vidSerice.GetAllVideos();
-            //return View(model.ToList());
-
-            var model1 = _tempHolder
-                .OrderByDescending(i => i.Id)
-                .Where(r => searchTerm == null || r.VidTitle.ToLower().StartsWith(searchTerm.ToLower()) && r.VidLanguage == "Espanol")
-                .ToPagedList(page, 4);
-
-            if (Request.IsAjaxRequest())
-            {
-                return PartialView("_VideoList", model1);
-            }
-            return PartialView("_VideoList", model1);
+        //{
+        //    //var model = _db.MyVideos.ToList();
+        //    //return View(model);
 
 
+        //    var _tempHolder = _vidSerice.GetAllVideos();
+        //    //return View(model.ToList());
 
-            //VideoModel model = new VideoModel();
-            //var models = _getAllVidsFromIVideoRepository.GetAllVideos().ToList();
-            // _getAllVidsFromIVideoRepository.GetAllVideos();
-            //return View(db.VideoModels.ToList());
-            //return View(models);
-            //List<VideoModel> model = new List<VideoModel>();
-            //model = null; 
-            //if (model == null)
-            //{
-            //    var models = _getAllVidsFromIVideoRepository.GetAllVideos();
-            //        return View(models);
-            //}
+        //    var model1 = _tempHolder
+        //        .OrderByDescending(i => i.Id)
+        //        .Where(r => searchTerm == null || r.VidTitle.ToLower().StartsWith(searchTerm.ToLower()) && r.VidLanguage == "Espanol")
+        //        .ToPagedList(page, 4);
 
-            //return RedirectToAction("Index", "Home");
-        }
+        //    if (Request.IsAjaxRequest())
+        //    {
+        //        return PartialView("_VideoList", model1);
+        //    }
+        //    return PartialView("_VideoList", model1);
+
+
+
+        //    //VideoModel model = new VideoModel();
+        //    //var models = _getAllVidsFromIVideoRepository.GetAllVideos().ToList();
+        //    // _getAllVidsFromIVideoRepository.GetAllVideos();
+        //    //return View(db.VideoModels.ToList());
+        //    //return View(models);
+        //    //List<VideoModel> model = new List<VideoModel>();
+        //    //model = null; 
+        //    //if (model == null)
+        //    //{
+        //    //    var models = _getAllVidsFromIVideoRepository.GetAllVideos();
+        //    //        return View(models);
+        //    //}
+
+        //    //return RedirectToAction("Index", "Home");
+        //}
 
         // GET: Video/Details/5
         public ActionResult Details(int? id)
@@ -160,6 +166,7 @@ namespace CastAKnowledgePros.Controllers
         }
 
         // GET: Video/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -170,6 +177,7 @@ namespace CastAKnowledgePros.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "Id,VidSource,VidTitle,VidDescription,VidCategory,VidAdded,VidLanguage")] VideoModel videoModel)
         {
             if (ModelState.IsValid)
@@ -187,6 +195,7 @@ namespace CastAKnowledgePros.Controllers
         }
 
         // GET: Video/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -207,6 +216,7 @@ namespace CastAKnowledgePros.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "Id,VidSource,VidTitle,VidDescription,VidCategory,VidAdded,VidLanguage")] VideoModel videoModel)
         {
             if (ModelState.IsValid)
@@ -223,6 +233,7 @@ namespace CastAKnowledgePros.Controllers
         }
 
         // GET: Video/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -242,6 +253,7 @@ namespace CastAKnowledgePros.Controllers
         // POST: Video/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             //VideoModel videoModel = db.VideoModels.Find(id);

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<CastAKnowledgePros.Models.VideoModel>
+
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Admin</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VidSource)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VidTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VidDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VidCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VidAdded)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VidLanguage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VidSource)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VidTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VidDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VidCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VidAdded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VidLanguage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

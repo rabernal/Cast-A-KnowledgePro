@@ -15,7 +15,7 @@ namespace CastAKnowledgePros.IRepository
         void SaveChanges();
         void Dispose(bool disposing);
         void RemoveVid(VideoModel removeVid);
-        List<VideoModel> GetPageEnglish(string pageSection);
-        List<VideoModel> GetPageSpanish(string pageSection);
+        IQueryable<VideoModel> GetPageEnglish(string pageSection);
+        IQueryable<VideoModel> GetPageSpanish(string pageSection);
     }
 }
