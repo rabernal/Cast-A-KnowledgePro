@@ -13,7 +13,7 @@
     $('nav a, .down-button a').bind('click', function () {
         event.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: $($(this).attr('href')).offset().top - 60
+            scrollTop: $($(this).attr('href')).offset().top - 70
         }, 1400, 'easeOutSine');
         
     });

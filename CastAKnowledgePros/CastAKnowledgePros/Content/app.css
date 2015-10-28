@@ -37,22 +37,18 @@ footer {
     margin-bottom: 12px;
 }
 
-#logo span {
-    font-size: 24px;
-}
-#logo span{
-    color: #fff;
-}
+
+
 
 
 
 a:link {
-    color: #4d3030;
+    color: #549290;
 }
 
 /* visited link */
 a:visited {
-    color: #fff;
+    color: black;
 }
 
 /* mouse over link */
@@ -212,6 +208,10 @@ a:hover {
 
 
 @media (min-width: 320px) {
+    #logo span {
+    font-size: 16px;
+    color: #fff;
+}
     .nav-search {
         background-color: #64bbb8;
         padding: .90em;
@@ -465,7 +465,10 @@ a:hover {
 
 
 @media (min-width: 480px) {
-
+    #logo span {
+    font-size: 18px;
+    color: #fff;
+}
 
     .nav-search {
         background-color: #64bbb8;
@@ -711,7 +714,10 @@ a:hover {
 
 
 @media (min-width: 768px) {
-
+    #logo span {
+    font-size: 20px;
+    color: #fff;
+}
     .nav-search {
         background-color: #64bbb8;
         padding: .90em;
@@ -953,7 +959,10 @@ a:hover {
 
 
 @media (min-width: 992px) {
-
+    #logo span {
+    font-size: 24px;
+    color: #fff;
+}
     .nav-search {
         background-color: #64bbb8;
         padding: .90em;
@@ -1191,7 +1200,10 @@ a:hover {
 
 
 @media (min-width: 1200px) {
-
+    #logo span {
+    font-size: 24px;
+    color: #fff;
+}
     .nav-search {
         background-color: #64bbb8;
         padding: .90em;
