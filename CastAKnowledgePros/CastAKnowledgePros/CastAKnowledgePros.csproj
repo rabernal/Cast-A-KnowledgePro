@@ -278,7 +278,9 @@
     <Content Include="images\lake.jpg" />
     <Content Include="images\log.png" />
     <Content Include="images\logBig.png" />
+    <Content Include="images\logo1.png" />
     <Content Include="images\MainImage.png" />
+    <Content Include="images\MainLogo1.png" />
     <Content Include="images\mountains.jpg" />
     <Content Include="images\oldTV.jpg" />
     <Content Include="images\openSea.jpg" />

@@ -64,7 +64,7 @@ namespace CastAKnowledgePros.Controllers
         //
         // POST: /Account/Login
         [HttpPost]
-        //[AllowAnonymous]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {

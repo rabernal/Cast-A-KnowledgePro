@@ -62,7 +62,7 @@ namespace CastAKnowledgePros.Controllers
         //    return View(model.ToList());
         //}
 
-        [OutputCache(CacheProfile ="Long", VaryByHeader = "X-Requested-With", Location = System.Web.UI.OutputCacheLocation.Server)]
+        [OutputCache(CacheProfile ="Medium", VaryByHeader = "X-Requested-With", Location = System.Web.UI.OutputCacheLocation.Server)]
         public ActionResult VideoIndex(string pageSection, string searchTerm = null, int page = 1)
         {
             

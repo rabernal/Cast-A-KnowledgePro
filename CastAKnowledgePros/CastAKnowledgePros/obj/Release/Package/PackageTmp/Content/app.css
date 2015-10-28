@@ -31,7 +31,18 @@ footer {
     box-shadow: rgba(0,0,0,0.5) 10px 10px 60px;
 }
 
+#logo img {
+    height: 50px;
+    padding-left: 10px;
+    margin-bottom: 12px;
+}
 
+#logo span {
+    font-size: 24px;
+}
+#logo span{
+    color: #fff;
+}
 
 
 
@@ -41,12 +52,12 @@ a:link {
 
 /* visited link */
 a:visited {
-    color: black;
+    color: #fff;
 }
 
 /* mouse over link */
 a:hover {
-    color: yellowgreen;
+    color: #644343;
 }
 
 /* selected link */
