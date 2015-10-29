@@ -88,7 +88,7 @@ namespace CastAKnowledgePros.Controllers
             {
                 var _tempHolder = _vidSerice.GetAllVideos();
                 var model = _tempHolder
-                    .OrderByDescending(i => i.Id)
+                    .OrderByDescending(i => i.VidAdded)
                     //.Where(r => searchTerm == null || r.VidTitle.ToLower().StartsWith(searchTerm.ToLower()))
                     .Where(r => searchTerm == null || r.VidTitle.ToLower().Contains(searchTerm.ToLower()))
                     .ToPagedList(page, 4);
