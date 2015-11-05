@@ -35,7 +35,7 @@ namespace CastAKnowledgePros
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      //"~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.js",
                       "~/Scripts/bootstrap.min.js"));
 
 

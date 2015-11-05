@@ -44,7 +44,7 @@ $(function () {
             $newHtml.effect("highlight"); // this adds yellow when searching 
         });
 
-        return false;http://localhost:59225/#carousel
+        return false;
     };
     //function useEverywehreAjax() {
     //    $.ajax(options).done(function (data) {
