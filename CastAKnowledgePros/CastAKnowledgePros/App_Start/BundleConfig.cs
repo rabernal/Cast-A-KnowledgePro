@@ -9,7 +9,7 @@ namespace CastAKnowledgePros
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        //"~/Scripts/jquery-{version}.js",
+                        "~/Scripts/jquery-{version}.js",
                         "~/Scripts/jquery-ui-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -22,17 +22,16 @@ namespace CastAKnowledgePros
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/mySelection").Include(
-                        "~/Scripts/displayVideos.js",
-                        "~/Scripts/scrolling.js",
-                        "~/Scripts/cbpAnimatedHeader.js",
+                        "~/Scripts/jquery.fs.wallpaper.min.js",
                         "~/Scripts/classie.js",
                         "~/Scripts/jquery.easing.1.3.js",
                         "~/Scripts/wow.min.js",
                         "~/Scripts/jquery.nanogallery.min.js",
                         "~/Scripts/jquery.stellar.js",
                         "~/Scripts/respond.js",
-
-                        "~/Scripts/jquery.fs.wallpaper.min.js"
+                        "~/Scripts/cbpAnimatedHeader.js",
+                        "~/Scripts/displayVideos.js",
+                        "~/Scripts/scrolling.js"
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
@@ -45,18 +44,15 @@ namespace CastAKnowledgePros
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/app.css",
                       //"~/Content/main.css",
+                      "~/Content/PagedList.css",
                       "~/Content/animate.css",
                       "~/Content/font-awesome.min.css",
-                      "~/Content/nanogallery.min.css",
-                      "~/Content/PagedList.css"
-
                       //"~/Content/jquery.fs.wallpaper.css",
                       //"~/Content/site.css",
                       //"~/Content/nav.css",
-
-                      ));
+                      "~/Content/app.css",
+                      "~/Content/nanogallery.min.css"));
         }
     }
 }

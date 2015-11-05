@@ -33,7 +33,6 @@ $(function () {
         var options = {
             url: $form.attr("action"),
             type: "get",
-            //cache: true,
             data: $form.serialize()
         };
         // ajax gets ejecuted with the optios above.. when done (data returned) then we display the new arrived data in the 

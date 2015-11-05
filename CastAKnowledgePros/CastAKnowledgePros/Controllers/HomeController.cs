@@ -65,21 +65,11 @@ namespace CastAKnowledgePros.Controllers
         [OutputCache(CacheProfile ="Medium", VaryByHeader = "X-Requested-With", Location = System.Web.UI.OutputCacheLocation.Server)]
         public ActionResult VideoIndex(string pageSection, string searchTerm = null, int page = 1)
         {
-            var _tempHolder = _vidSerice.GetAllVideos();
-
+            
+            
             if (pageSection != null && Request.IsAjaxRequest())
             {
-                if (pageSection.ToLower() == "all")
-                {
-                    //var _tempHolder = _vidSerice.GetAllVideos();
-                    var model = _tempHolder
-                        .OrderByDescending(i => i.VidAdded)
-                        //.Where(r => searchTerm == null || r.VidTitle.ToLower().StartsWith(searchTerm.ToLower()))
-                        .Where(r => searchTerm == null || r.VidTitle.ToLower().Contains(searchTerm.ToLower()))
-                        .ToPagedList(page, 4);
-                    return PartialView("_VideoList", model);
-                }
-                else if (pageSection.ToLower() == "espanol")
+                if (pageSection.ToLower() == "espanol")
                 {
                     var _temp = _vidSerice.GetPageSpanish(pageSection);
                     var model = _temp
@@ -96,16 +86,16 @@ namespace CastAKnowledgePros.Controllers
             }// end of pagesection and is ajax
             else
             {
-                //var _tempHolder = _vidSerice.GetAllVideos();
+                var _tempHolder = _vidSerice.GetAllVideos();
                 var model = _tempHolder
                     .OrderByDescending(i => i.VidAdded)
                     //.Where(r => searchTerm == null || r.VidTitle.ToLower().StartsWith(searchTerm.ToLower()))
                     .Where(r => searchTerm == null || r.VidTitle.ToLower().Contains(searchTerm.ToLower()))
                     .ToPagedList(page, 4);
-                //if (Request.IsAjaxRequest())
-                //{
-                //    return PartialView("_VideoList", model);
-                //}
+                if (Request.IsAjaxRequest())
+                {
+                    return PartialView("_VideoList", model);
+                }
                 return View(model);
             }
 
