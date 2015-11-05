@@ -18,10 +18,10 @@
         <form method="get" action="@Url.Action("VideoIndex")"
               data-search-ajax="true" data-search-target="#displayVideoList">
 
-            <input type="text" name="searchTerm" class="search-box" @*id="input"*@
+            <input type="text" name="searchTerm" class="search-box" id="inputReset"
                    size="40" placeholder="  Search for Video.." data-search-autocomplete="@Url.Action("AutoComplete")" />
             
-            <button data-searchReset-ajax='true' action="@Url.Action("VideoIndex")" data-search-target="#displayVideoList" class="close-icon" type="reset"></button>
+            <button type="reset" id="resetButton" data-searchReset-ajax='true' action="@Url.Action("VideoIndex")" data-search-target="#displayVideoList" class="close-icon" ></button>
         </form>
 
         
