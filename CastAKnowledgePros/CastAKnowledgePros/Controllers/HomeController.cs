@@ -65,7 +65,7 @@ namespace CastAKnowledgePros.Controllers
         [OutputCache(CacheProfile ="Medium", VaryByHeader = "X-Requested-With", Location = System.Web.UI.OutputCacheLocation.Server)]
         public ActionResult VideoIndex(string pageSection, string searchTerm = null, int page = 1)
         {
-            
+
             
             if (pageSection != null && Request.IsAjaxRequest())
             {

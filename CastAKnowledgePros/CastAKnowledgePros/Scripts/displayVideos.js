@@ -4,7 +4,14 @@
 $(function () {
 
 
-
+    function useEverywehreAjax(options, $form) {
+        $.ajax(options).done(function (data) {
+            var $target = $($form.attr("data-search-target"));
+            var $newHtml = $(data);
+            $target.replaceWith($newHtml);// we repalced whatever data is already in the div with the new data
+            $newHtml.effect("highlight"); // this adds yellow when searching 
+        });
+    }
 
 
     var ajaxFormSubmitReset = function () {
@@ -16,15 +23,7 @@ $(function () {
             type: "get",
             data: $form.serialize()
         };
-        
-        // ajax gets ejecuted with the optios above.. when done (data returned) then we display the new arrived data in the 
-        // target section. 
-        //$.ajax(options).done(function (data) {
-        //    var $target = $($form.attr("data-search-target"));
-        //    var $newHtml = $(data);
-        //    $target.replaceWith($newHtml);// we repalced whatever data is already in the div with the new data
-        //    $newHtml.effect("highlight"); // this adds yellow when searching 
-        //});
+
         useEverywehreAjax(options, $form)
 
         return true;
@@ -41,27 +40,12 @@ $(function () {
             type: "get",
             data: $form.serialize()
         };
-        // ajax gets ejecuted with the optios above.. when done (data returned) then we display the new arrived data in the 
-        // target section. 
-        //$.ajax(options).done(function (data) {
-        //    var $target = $($form.attr("data-search-target"));
-        //    var $newHtml = $(data);
-        //    $target.replaceWith($newHtml);// we repalced whatever data is already in the div with the new data
-        //    $newHtml.effect("highlight"); // this adds yellow when searching 
-        //});
 
         useEverywehreAjax(options, $form)
 
         return false;
     };
-    function useEverywehreAjax(options, $form) {
-        $.ajax(options).done(function (data) {
-            var $target = $($form.attr("data-search-target"));
-            var $newHtml = $(data);
-            $target.replaceWith($newHtml);// we repalced whatever data is already in the div with the new data
-            $newHtml.effect("highlight"); // this adds yellow when searching 
-        });
-    }
+
 
     var ajaxFormSubmit = function () {
         var $form = $(this);// this puts the form in a variable
@@ -71,14 +55,6 @@ $(function () {
             type: $form.attr("method"),
             data: $form.serialize()
         };
-        // ajax gets ejecuted with the optios above.. when done (data returned) then we display the new arrived data in the 
-        // target section. 
-        //$.ajax(options).done(function (data) {
-        //    var $target = $($form.attr("data-search-target"));
-        //    var $newHtml = $(data);
-        //    $target.replaceWith($newHtml);// we repalced whatever data is already in the div with the new data
-        //    $newHtml.effect("highlight"); // this adds yellow when searching 
-        //});
         useEverywehreAjax(options, $form)
 
         return false;

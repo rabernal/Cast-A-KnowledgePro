@@ -12,9 +12,9 @@ namespace CastAKnowledgePros
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/jquery-ui-{version}.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*",
-                        "~/Scripts/jquery.validate.unobtrusive.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+            //            "~/Scripts/jquery.validate*",
+            //            "~/Scripts/jquery.validate.unobtrusive.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
@@ -22,21 +22,22 @@ namespace CastAKnowledgePros
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/mySelection").Include(
-                        "~/Scripts/jquery.fs.wallpaper.min.js",
-                        "~/Scripts/classie.js",
-                        "~/Scripts/jquery.easing.1.3.js",
-                        "~/Scripts/wow.min.js",
-                        "~/Scripts/jquery.nanogallery.min.js",
-                        "~/Scripts/jquery.stellar.js",
-                        "~/Scripts/respond.js",
-                        "~/Scripts/cbpAnimatedHeader.js",
-                        "~/Scripts/displayVideos.js",
-                        "~/Scripts/scrolling.js"
+                       // //"~/Scripts/jquery.fs.wallpaper.min.js",
+                       // "~/Scripts/classie.js",
+                       ////"~/Scripts/jquery.easing.1.3.js",
+                       // "~/Scripts/wow.min.js",
+                       // "~/Scripts/jquery.nanogallery.min.js",
+                       // "~/Scripts/jquery.stellar.min.js",
+                       // //"~/Scripts/respond.js",
+                       // "~/Scripts/cbpAnimatedHeader.js",
+                       // "~/Scripts/displayVideos.js",
+                       // "~/Scripts/scrolling.js"
+                        "~/Scripts/Combine.min.js"
                         ));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/bootstrap.min.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+            //          "~/Scripts/bootstrap.js",
+            //          "~/Scripts/bootstrap.min.js"));
 
 
 
