@@ -22,22 +22,22 @@ namespace CastAKnowledgePros
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/mySelection").Include(
-                       // //"~/Scripts/jquery.fs.wallpaper.min.js",
-                       // "~/Scripts/classie.js",
-                       ////"~/Scripts/jquery.easing.1.3.js",
-                       // "~/Scripts/wow.min.js",
-                       // "~/Scripts/jquery.nanogallery.min.js",
-                       // "~/Scripts/jquery.stellar.min.js",
-                       // //"~/Scripts/respond.js",
-                       // "~/Scripts/cbpAnimatedHeader.js",
-                       // "~/Scripts/displayVideos.js",
-                       // "~/Scripts/scrolling.js"
-                        "~/Scripts/Combine.min.js"
+                        //"~/Scripts/jquery.fs.wallpaper.min.js",
+                        "~/Scripts/classie.js",
+                        //"~/Scripts/jquery.easing.1.3.js",
+                        "~/Scripts/wow.min.js",
+                        "~/Scripts/jquery.nanogallery.min.js",
+                        "~/Scripts/jquery.stellar.min.js",
+                        //"~/Scripts/respond.js",
+                        "~/Scripts/cbpAnimatedHeader.js",
+                        "~/Scripts/displayVideos.js",
+                        "~/Scripts/scrolling.js"
+
                         ));
 
-            //bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-            //          "~/Scripts/bootstrap.js",
-            //          "~/Scripts/bootstrap.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.min.js"));
 
 
 

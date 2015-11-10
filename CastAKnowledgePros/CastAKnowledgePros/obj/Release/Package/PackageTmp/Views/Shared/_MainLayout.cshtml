@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0; m">
     <title>@ViewBag.Title - My Video's Application</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    
 
 
 </head>
@@ -167,7 +167,7 @@
         <p>&copy; @DateTime.Now.Year - Cast-A-Knowledge.com Author:<a href="@Url.Action("Admin")">R.B.</a></p>
     </footer>
 
-
+    @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/jqueryval")
