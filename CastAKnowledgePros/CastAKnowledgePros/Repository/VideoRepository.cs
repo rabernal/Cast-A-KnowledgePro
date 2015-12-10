@@ -9,6 +9,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using Dapper;
+using PagedList;
 
 namespace CastAKnowledgePros.Repository
 {
@@ -16,26 +17,15 @@ namespace CastAKnowledgePros.Repository
     {
         //private ApplicationDbContext _db;
         private CAKnowledgeDB _db;
-        //private IDbConnection _db2 = new SqlConnection
-        //    (ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
 
-        //private List<VideoModel> results = new List<VideoModel>();
-
-        //public VideoRepository(ApplicationDbContext db)
-        //{
-        //    _db = db;
-        //}
         public VideoRepository()
         {
             _db = new CAKnowledgeDB();
-            //_db = new ApplicationDbContext();
         }
 
         public void CreateVid(VideoModel vidModel)
         {
             _db.MyVideos.Add(vidModel);
-            //_db.VideoModels.Add(vidModel);
-
         }
 
         public void EditEntityStateModified(VideoModel vidModel)
@@ -43,20 +33,9 @@ namespace CastAKnowledgePros.Repository
             _db.Entry(vidModel).State = EntityState.Modified;
         }
 
-        public List<VideoModel> GetAllVideos()
+        public IEnumerable<VideoModel> GetAllVideos()
         {
-            //var connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-
-            //IDbConnection _myDB = new SqlConnection(connectionString);
-            //var allVids = _myDB.Query<VideoModel>("Select * from VideoModel");
-
-            //using (var getAllVidsFromStrProc = _this.db.Query<VideoModel>("GetAllVideosProc", new {Id = id }, CommandType.StoredProcedure){ }
-
-            var allVideosList = new List<VideoModel>();
-
-            //return allVideosList = _db.VideoModels.ToList();
-            return allVideosList = _db.MyVideos.ToList();
-
+            return _db.MyVideos;
         }
 
         public void SaveChanges()
@@ -70,42 +49,48 @@ namespace CastAKnowledgePros.Repository
             {
                 _db.Dispose();
             }
-            //base.Dispose(disposing);
         }
 
         public void RemoveVid(VideoModel removeVid)
         {
-            //_db.VideoModels.Remove(removeVid);
             _db.MyVideos.Remove(removeVid);
         }
 
-        public IQueryable<VideoModel> GetPageEnglish(string pageSection)
+
+        public IEnumerable<VideoModel> GetAllVideos(string searchTerm, int page)
         {
-            //var allVideosList = _db.MyVideos;
-            //var model = allVideosList
-            //    .OrderByDescending(i => i.Id)
-            //    .Where(t => t.VidCategory.ToLower().StartsWith(pageSection.ToLower()));
-            ////return allVideosList = _db.VideoModels.ToList();
-            //return model;
+            var model = _db.MyVideos
+                .OrderByDescending(i => i.VidAdded)
+                //.Where(r => searchTerm == null || r.VidTitle.ToLower().StartsWith(searchTerm.ToLower()))
+                .Where(r => searchTerm == null || r.VidTitle.ToLower().Contains(searchTerm.ToLower()))
+                .ToPagedList(page, 4);
+            return model;
+        }
+
+        public IEnumerable<VideoModel> AutoComplete(string term)
+        {
+            var model = _db.MyVideos
+                .Where(v => v.VidTitle.ToLower().Contains(term.ToLower()))
+                .OrderByDescending(i => i.Id)
+                .Take(4);
+            return model;
+        }
+
+        public IEnumerable<VideoModel> GetPageEnglish(string pageSection, int page)
+        {
 
             var model = _db.MyVideos.OrderByDescending(i => i.Id)
-                                    .Where(t => t.VidCategory.ToLower().StartsWith(pageSection.ToLower()));
+                        .Where(t => t.VidCategory.ToLower().StartsWith(pageSection.ToLower()))
+                        .ToPagedList(page, 4);
             return model;
 
         }
 
-        public IQueryable<VideoModel> GetPageSpanish(string pageSection)
+        public IEnumerable<VideoModel> GetPageSpanish(string pageSection, int page)
         {
-            //var allVideosList = _db.MyVideos;
-
-            ////return allVideosList = _db.VideoModels.ToList();
-            //var model = allVideosList
-            //    .OrderByDescending(i => i.Id)
-            //    .Where(t => t.VidLanguage.ToLower().StartsWith(pageSection.ToLower()));
-            ////return allVideosList = _db.VideoModels.ToList();
-            //return model;
             var model = _db.MyVideos.OrderByDescending(i => i.Id)
-                        .Where(t => t.VidLanguage.ToLower().StartsWith(pageSection.ToLower()));
+            .Where(t => t.VidLanguage.ToLower().StartsWith(pageSection.ToLower()))
+            .ToPagedList(page, 4);
             return model;
         }
     }

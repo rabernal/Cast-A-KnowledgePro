@@ -14,7 +14,7 @@ namespace CastAKnowledgePros
     /// </summary>
     //[WebService(Namespace = "http://tempuri.org/")]
     [WebService(Namespace = "http://castaknowledge.azurewebsites.net")]
-    
+
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
@@ -30,37 +30,35 @@ namespace CastAKnowledgePros
             _getAllVidsFromIVideoRepository = myDb;
         }//paramiterless constructor
 
-        [WebMethod(Description = "Gets all the videos from db", EnableSession = true)]
-        public List<VideoModel> GetAllVideos()
+        [WebMethod(Description = "Gets auto complete", EnableSession = true)]
+        public IEnumerable<VideoModel> AutoComplete(string term)
         {
-            var models = _getAllVidsFromIVideoRepository.GetAllVideos();
-
-            // here is where you put a message stating that no videos were return. a redirect page.   
-            return models;
+            return _getAllVidsFromIVideoRepository.AutoComplete(term);
         }
-        [WebMethod(Description = "Gets all page width vid category English", EnableSession = true)]
-        public List<VideoModel> GetPageEnglish(string pageSection)
+
+        [WebMethod(Description = "Gets all the videos from db", EnableSession = true)]
+        public IEnumerable<VideoModel> GetAllVideos()
         {
-            var allVideosList = _getAllVidsFromIVideoRepository.GetPageEnglish(pageSection);
-            //var model = allVideosList
-            //    .OrderByDescending(i => i.Id)
-            //    .Where(t => t.VidCategory.ToLower().StartsWith(pageSection.ToLower()));
-            ////return allVideosList = _db.VideoModels.ToList();
-            //return model.ToList();
-            return allVideosList.ToList();
+            // here is where you put a message stating that no videos were return. a redirect page.   
+            return _getAllVidsFromIVideoRepository.GetAllVideos();
+        }
+        [WebMethod(Description = "Get all videos form with paramiters", EnableSession = true)]
+        public IEnumerable<VideoModel> GetAllVideos(string searchTerm, int page)
+        {
+            // here is where you put a message stating that no videos were return. a redirect page.   
+            return _getAllVidsFromIVideoRepository.GetAllVideos(searchTerm, page);
+        }
+
+        [WebMethod(Description = "Gets all page width vid category English", EnableSession = true)]
+        public IEnumerable<VideoModel> GetPageEnglish(string pageSection, int page)
+        {
+            return _getAllVidsFromIVideoRepository.GetPageEnglish(pageSection, page);
+
         }
         [WebMethod(Description = "Gets all page width vid category Espanol", EnableSession = true)]
-        public List<VideoModel> GetPageSpanish(string pageSection)
+        public IEnumerable<VideoModel> GetPageSpanish(string pageSection, int page)
         {
-            var allVideosList = _getAllVidsFromIVideoRepository.GetPageSpanish(pageSection);
-
-            ////return allVideosList = _db.VideoModels.ToList();
-            //var model = allVideosList
-            //    .OrderByDescending(i => i.Id)
-            //    .Where(t => t.VidLanguage.ToLower().StartsWith(pageSection.ToLower()));
-            ////return allVideosList = _db.VideoModels.ToList();
-            //return model.ToList();
-            return allVideosList.ToList();
+            return _getAllVidsFromIVideoRepository.GetPageSpanish(pageSection, page);
         }
 
         [WebMethod(Description = "Creates a new video and adds to db")]
