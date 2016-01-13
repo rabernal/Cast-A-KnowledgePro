@@ -12,7 +12,7 @@ using CastAKnowledgePros.Models;
 
 namespace CastAKnowledgePros.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -137,7 +137,7 @@ namespace CastAKnowledgePros.Controllers
         //
         // GET: /Account/Register
         //[AllowAnonymous]
-        [Authorize]
+        //[Authorize]
         public ActionResult Register()
         {
             return View();
@@ -148,7 +148,7 @@ namespace CastAKnowledgePros.Controllers
         //[AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)

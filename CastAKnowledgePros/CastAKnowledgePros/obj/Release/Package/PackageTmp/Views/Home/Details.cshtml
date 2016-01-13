@@ -1,0 +1,80 @@
+﻿@model CastAKnowledgePros.Models.VideoModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KHQKC5"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KHQKC5');</script>
+<!-- End Google Tag Manager -->
+
+<h2>Details</h2>
+
+<div>
+    <h4>VideoModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VidSource)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VidSource)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VidTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VidTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VidDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VidDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VidCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VidCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VidAdded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VidAdded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VidLanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VidLanguage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Admin")
+</p>
