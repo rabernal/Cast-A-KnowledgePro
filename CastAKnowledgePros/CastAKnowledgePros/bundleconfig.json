@@ -1,0 +1,24 @@
+[
+  {
+    "outputFileName": "Content/GlobalBundle.css",
+    "inputFiles": [
+      "Content/PagedList.css",
+      "Content/animate.css",
+      "Content/font-awesome.css",
+      "Content/app.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/MyBundle.js",
+    "inputFiles": [
+      "Scripts/displayVideos.js",
+      "Scripts/scrolling.js"
+    ]
+  },
+  {
+    "outputFileName": "EntetyDbContext/CAKnowledgeDB.cs",
+    "inputFiles": [
+      "EntetyDbContext/CAKnowledgeDB.cs"
+    ]
+  }
+]

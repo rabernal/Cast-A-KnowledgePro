@@ -30,8 +30,9 @@ namespace CastAKnowledgePros
                         "~/Scripts/jquery.stellar.min.js",
                         //"~/Scripts/respond.js",
                         "~/Scripts/cbpAnimatedHeader.js",
-                        "~/Scripts/displayVideos.js",
-                        "~/Scripts/scrolling.js"
+                        //"~/Scripts/displayVideos.js",
+                        //"~/Scripts/scrolling.js"
+                        "~/Scripts/MyBundle.min.js"
 
                         ));
 
@@ -45,14 +46,15 @@ namespace CastAKnowledgePros
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      //"~/Content/main.css",
-                      "~/Content/PagedList.css",
-                      "~/Content/animate.css",
-                      "~/Content/font-awesome.min.css",
-                      //"~/Content/jquery.fs.wallpaper.css",
-                      //"~/Content/site.css",
-                      //"~/Content/nav.css",
-                      "~/Content/app.css",
+                      ////"~/Content/main.css",
+                      //"~/Content/PagedList.css",
+                      //"~/Content/animate.css",
+                      //"~/Content/font-awesome.min.css",
+                      ////"~/Content/jquery.fs.wallpaper.css",
+                      ////"~/Content/site.css",
+                      ////"~/Content/nav.css",
+                      //"~/Content/app.css",
+                      "~/Content/GlobalBundle.min.css",
                       "~/Content/nanogallery.min.css"));
         }
     }

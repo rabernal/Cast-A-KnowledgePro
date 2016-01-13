@@ -8,6 +8,7 @@ namespace CastAKnowledgePros.Models
 {
     public class CAKnowledgeDB : DbContext
     {
+        //public CAKnowledgeDB() : base("name=DefaultConnection")
         public CAKnowledgeDB() : base("name=DefaultConnection")
         {
 

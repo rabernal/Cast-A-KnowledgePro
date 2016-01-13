@@ -13,6 +13,10 @@ namespace CastAKnowledgePros.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult myIndex()
+        {
+            return View();
+        }
         //CAKnowledgeDB _db = new CAKnowledgeDB();
 
         private IVideoRepository _getAllVidsFromIVideoRepository;
@@ -27,7 +31,7 @@ namespace CastAKnowledgePros.Controllers
         //[OutputCache(CacheProfile = "Short")]
         public ActionResult AutoComplete(string term)
         {
-            return Json(_getAllVidsFromIVideoRepository.AutoComplete(term).Select(vd => new {label = vd.VidTitle }), JsonRequestBehavior.AllowGet);
+            return Json(_getAllVidsFromIVideoRepository.AutoComplete(term).Select(vd => new { label = vd.VidTitle }), JsonRequestBehavior.AllowGet);
             //return Json(_vidSerice.AutoComplete(term).Select(vd => new {label = vd.VidTitle }), JsonRequestBehavior.AllowGet);
         }
 
@@ -65,8 +69,6 @@ namespace CastAKnowledgePros.Controllers
             //return View(_vidSerice.GetAllVideos());
             return View(_getAllVidsFromIVideoRepository.GetAllVideos());
         }
-
-        // GET: Video
 
 
         // GET: Video/Details/5
