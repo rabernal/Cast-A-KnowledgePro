@@ -10,7 +10,7 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<!-- Google Tag Manager -->
+<!-- Google Tag Manager 
 <noscript>
     <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KHQKC5"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -21,7 +21,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KHQKC5');</script>
-<!-- End Google Tag Manager -->
+End Google Tag Manager -->
 
 <div class="video-background ">
     @*<p>
@@ -34,6 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             <input type="text" name="searchTerm" class="search-box" id="inputReset"
                    size="40" placeholder="  Search for Video.." data-search-autocomplete="@Url.Action("AutoComplete")" />
+
             
             <button type="reset" id="resetButton" data-searchReset-ajax='true' action="@Url.Action("VideoIndex")" data-search-target="#displayVideoList" class="close-icon" ></button>
         </form>

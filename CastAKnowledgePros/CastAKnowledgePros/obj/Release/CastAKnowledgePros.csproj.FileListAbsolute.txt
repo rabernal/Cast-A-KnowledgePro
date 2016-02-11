@@ -148,3 +148,4 @@
 \\psf\Home\Desktop\GitHub\Cast-A-KnowledgePro\CastAKnowledgePros\CastAKnowledgePros\obj\Release\CastAKnowledgePros.csproj.GenerateResource.Cache
 \\psf\Home\Desktop\GitHub\Cast-A-KnowledgePro\CastAKnowledgePros\CastAKnowledgePros\obj\Release\CastAKnowledgePros.dll
 \\psf\Home\Desktop\GitHub\Cast-A-KnowledgePro\CastAKnowledgePros\CastAKnowledgePros\obj\Release\CastAKnowledgePros.pdb
+\\psf\Home\Desktop\GitHub\Cast-A-KnowledgePro\CastAKnowledgePros\CastAKnowledgePros\obj\Release\CastAKnowledgePros.csprojResolveAssemblyReference.cache

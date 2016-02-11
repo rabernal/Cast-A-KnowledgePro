@@ -15,7 +15,7 @@ namespace CastAKnowledgePros.Repository
 {
     public class VideoRepository : IVideoRepository
     {
-        //private ApplicationDbContext _db;
+         //private ApplicationDbContext _db;
         private CAKnowledgeDB _db;
 
         public VideoRepository()
@@ -61,9 +61,8 @@ namespace CastAKnowledgePros.Repository
         {
             var model = _db.MyVideos
                 .OrderByDescending(i => i.VidAdded)
-                //.Where(r => searchTerm == null || r.VidTitle.ToLower().StartsWith(searchTerm.ToLower()))
-                .Where(r => searchTerm == null || r.VidTitle.ToLower().Contains(searchTerm.ToLower()))
-                .ToPagedList(page, 4);
+                .Where(r => searchTerm == null || r.VidTitle.ToLower().Contains(searchTerm));
+                
             return model;
         }
 
@@ -80,8 +79,7 @@ namespace CastAKnowledgePros.Repository
         {
 
             var model = _db.MyVideos.OrderByDescending(i => i.Id)
-                        .Where(t => t.VidCategory.ToLower().StartsWith(pageSection.ToLower()))
-                        .ToPagedList(page, 4);
+                        .Where(t => t.VidCategory.ToLower().StartsWith(pageSection));
             return model;
 
         }
@@ -89,8 +87,7 @@ namespace CastAKnowledgePros.Repository
         public IEnumerable<VideoModel> GetPageSpanish(string pageSection, int page)
         {
             var model = _db.MyVideos.OrderByDescending(i => i.Id)
-            .Where(t => t.VidLanguage.ToLower().StartsWith(pageSection.ToLower()))
-            .ToPagedList(page, 4);
+            .Where(t => t.VidLanguage.ToLower().StartsWith(pageSection));
             return model;
         }
     }

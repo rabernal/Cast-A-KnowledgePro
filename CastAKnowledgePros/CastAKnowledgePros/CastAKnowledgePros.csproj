@@ -215,6 +215,10 @@
     <Content Include="Content\GlobalBundle.min.css">
       <DependentUpon>GlobalBundle.css</DependentUpon>
     </Content>
+    <Content Include="Content\GlobalBundle2.css" />
+    <Content Include="Content\GlobalBundle2.min.css">
+      <DependentUpon>GlobalBundle2.css</DependentUpon>
+    </Content>
     <Content Include="images\Background.PNG" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\app.css" />
@@ -330,6 +334,10 @@
     <Content Include="Scripts\MyBundle.min.js">
       <DependentUpon>MyBundle.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\PublishBundle.js" />
+    <Content Include="Scripts\PublishBundle.min.js">
+      <DependentUpon>PublishBundle.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\scrolling.js" />
@@ -384,7 +392,6 @@
     <Content Include="Views\Home\Edit.cshtml" />
     <Content Include="Views\Home\Delete.cshtml" />
     <Content Include="Views\Home\Admin.cshtml" />
-    <Content Include="Views\Home\myIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -435,7 +442,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\StyleCop.MSBuild.4.7.49.0\build\StyleCop.MSBuild.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StyleCop.MSBuild.4.7.49.0\build\StyleCop.MSBuild.Targets'))" />
   </Target>
+  <Import Project="..\packages\StyleCop.MSBuild.4.7.49.0\build\StyleCop.MSBuild.Targets" Condition="Exists('..\packages\StyleCop.MSBuild.4.7.49.0\build\StyleCop.MSBuild.Targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

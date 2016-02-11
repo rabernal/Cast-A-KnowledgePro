@@ -9,15 +9,11 @@ using System.Net;
 using CastAKnowledgePros.IRepository;
 using CastAKnowledgePros.Repository;
 
+
 namespace CastAKnowledgePros.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult myIndex()
-        {
-            return View();
-        }
-        //CAKnowledgeDB _db = new CAKnowledgeDB();
 
         private IVideoRepository _getAllVidsFromIVideoRepository;
         private readonly VideoRepository myDb = new VideoRepository();
@@ -26,50 +22,49 @@ namespace CastAKnowledgePros.Controllers
         public HomeController()
         {
             _getAllVidsFromIVideoRepository = myDb;
-        }// parameterless constructor
-        //[ChildActionOnly]
-        //[OutputCache(CacheProfile = "Short")]
+        }// parameter less constructor
+
         public ActionResult AutoComplete(string term)
         {
             return Json(_getAllVidsFromIVideoRepository.AutoComplete(term).Select(vd => new { label = vd.VidTitle }), JsonRequestBehavior.AllowGet);
-            //return Json(_vidSerice.AutoComplete(term).Select(vd => new {label = vd.VidTitle }), JsonRequestBehavior.AllowGet);
+
         }
 
         [OutputCache(CacheProfile = "short", VaryByHeader = "X-Requested-With", Location = System.Web.UI.OutputCacheLocation.Server)]
-        public ActionResult VideoIndex(string pageSection, string searchTerm = null, int page = 1)
+        public ActionResult VideoIndex(string pageSection , string searchTerm = null, int page = 1)
         {
+     
+            string searchT = (searchTerm == null) ? searchTerm : searchTerm.ToLower();
+            string pageS = (pageSection == null) ? pageSection : pageSection.ToLower();
             if (pageSection != null && Request.IsAjaxRequest())
             {
-                if (pageSection.ToLower() == "espanol")
+                if (pageS == "espanol")
                 {
-                    //return PartialView("_VideoList", _vidSerice.GetPageSpanish(pageSection, page));
-                    return PartialView("_VideoList", _getAllVidsFromIVideoRepository.GetPageSpanish(pageSection, page));
+                    return PartialView("_VideoList", _getAllVidsFromIVideoRepository.GetPageSpanish(pageS, page).ToPagedList(page, 6));
                 }
                 else
                 {
-                    //return PartialView("_VideoList", _vidSerice.GetPageEnglish(pageSection, page));
-                    return PartialView("_VideoList", _getAllVidsFromIVideoRepository.GetPageEnglish(pageSection, page));
+                    return PartialView("_VideoList", _getAllVidsFromIVideoRepository.GetPageEnglish(pageS, page).ToPagedList(page, 6));
                 }
-            }// end of pagesection and is ajax
+            }// end of page section and is Ajax
             else
             {
                 if (Request.IsAjaxRequest())
                 {
-                    //return PartialView("_VideoList", _vidSerice.GetAllVideos(searchTerm,page));
-                    return PartialView("_VideoList", _getAllVidsFromIVideoRepository.GetAllVideos(searchTerm, page));
+                    return PartialView("_VideoList", _getAllVidsFromIVideoRepository.GetAllVideos(searchT, page).ToPagedList(page, 6));
                 }
-                //return View(_vidSerice.GetAllVideos(searchTerm, page));
-                return View(_getAllVidsFromIVideoRepository.GetAllVideos(searchTerm, page));
+ 
+                return View(_getAllVidsFromIVideoRepository.GetAllVideos(searchT, page).ToPagedList(page, 6));
+
+
             }
 
         }// end of video index
         [Authorize]
         public ActionResult Admin()
         {
-            //return View(_vidSerice.GetAllVideos());
             return View(_getAllVidsFromIVideoRepository.GetAllVideos());
         }
-
 
         // GET: Video/Details/5
         public ActionResult Details(int? id)
@@ -78,8 +73,8 @@ namespace CastAKnowledgePros.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //var videoModel = _vidSerice.GetAllVideos().ToList().Find(v => v.Id == id);
-            var videoModel = _getAllVidsFromIVideoRepository.GetAllVideos().ToList().Find(v => v.Id == id);
+            var videoModel = _getAllVidsFromIVideoRepository.GetAllVideos().Where(i => i.Id == id).FirstOrDefault();
+
 
             if (videoModel == null)
             {
@@ -105,8 +100,6 @@ namespace CastAKnowledgePros.Controllers
         {
             if (ModelState.IsValid)
             {
-                //_vidSerice.CreateVid(videoModel);
-                //_vidSerice.SaveChanges();
                 _getAllVidsFromIVideoRepository.CreateVid(videoModel);
                 _getAllVidsFromIVideoRepository.SaveChanges();
                 return RedirectToAction("VideoIndex");
@@ -123,8 +116,7 @@ namespace CastAKnowledgePros.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //VideoModel videoModel = _vidSerice.GetAllVideos().ToList().Find(v => v.Id == id);
-            VideoModel videoModel = _getAllVidsFromIVideoRepository.GetAllVideos().ToList().Find(v => v.Id == id);
+            var videoModel = _getAllVidsFromIVideoRepository.GetAllVideos().Where(i => i.Id == id).FirstOrDefault();
 
             if (videoModel == null)
             {
@@ -132,6 +124,8 @@ namespace CastAKnowledgePros.Controllers
             }
             return View(videoModel);
         }
+
+
 
         // POST: Video/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -143,8 +137,6 @@ namespace CastAKnowledgePros.Controllers
         {
             if (ModelState.IsValid)
             {
-                //_vidSerice.EditEntityStateModified(videoModel);
-                //_vidSerice.SaveChanges();
                 _getAllVidsFromIVideoRepository.EditEntityStateModified(videoModel);
                 _getAllVidsFromIVideoRepository.SaveChanges();
                 return RedirectToAction("VideoIndex");
@@ -160,8 +152,7 @@ namespace CastAKnowledgePros.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //VideoModel videoModel = _vidSerice.GetAllVideos().ToList().Find(v => v.Id == id);
-            VideoModel videoModel = _getAllVidsFromIVideoRepository.GetAllVideos().ToList().Find(v => v.Id == id);
+            var videoModel = _getAllVidsFromIVideoRepository.GetAllVideos().Where(i => i.Id == id).FirstOrDefault();
             if (videoModel == null)
             {
                 return HttpNotFound();
@@ -175,19 +166,10 @@ namespace CastAKnowledgePros.Controllers
         [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
-            //VideoModel videoModel = _vidSerice.GetAllVideos().ToList().Find(v => v.Id == id);
-            VideoModel videoModel = _getAllVidsFromIVideoRepository.GetAllVideos().ToList().Find(v => v.Id == id);
-            //_vidSerice.RemoveVid(videoModel);
-            //_vidSerice.SaveChanges();
+            var videoModel = _getAllVidsFromIVideoRepository.GetAllVideos().Where(i => i.Id == id).FirstOrDefault();
             _getAllVidsFromIVideoRepository.RemoveVid(videoModel);
             _getAllVidsFromIVideoRepository.SaveChanges();
             return RedirectToAction("VideoIndex");
-        }
-
-        public ActionResult ModernViewIndex()
-        {
-            //return View(_vidSerice.GetAllVideos());
-            return View(_getAllVidsFromIVideoRepository.GetAllVideos());
         }
 
         protected override void Dispose(bool disposing)

@@ -30,15 +30,15 @@ $(function () {
     //}
 
     var ajaxFormSubmitTab = function () {
-        var $form = $(this);// this puts the form in a variable
+        var $event = $(this);// this puts the form in a variable
         // this captures the url, type, data
         var options = {
-            url: $form.attr("action"),
+            url: $event.attr("action"),
             type: "get",
-            data: $form.serialize()
+            //data: $form.serialize()
         };
 
-        useEverywehreAjax(options, $form)
+        useEverywehreAjax(options, $event)
 
         return false;
     };
@@ -99,9 +99,20 @@ $(function () {
         });
         return false;
 
+
     };
 
-    $("form[data-search-ajax='true']").submit(ajaxFormSubmit);// data - atrribure is added to the input tag for the search this will start the ajax
+    //var autocomplete = function () {
+    //    var $input = $(this);
+    //    $input.autocomplete({
+    //        source: $input.attr("data-search-autocomplete")
+    //    });
+
+    //};
+
+    //$("input[data-search-autocomplete]").each(autocomplete);
+
+    $("form[data-search-ajax='true']").submit(ajaxFormSubmit);// data - attribute is added to the input tag for the search this will start the ajax
     $("input[data-search-autocomplete]").each(createAutocomplete);
     //$("input[data-search-autocomplete]").change(submitAutocompleteForm);
     $(".main-content").on("click", ".pagedList a", getPage);// this event helps to display new page.. using a plugin called PagedList NugetPacg 

@@ -20,5 +20,32 @@
     "inputFiles": [
       "EntetyDbContext/CAKnowledgeDB.cs"
     ]
+  },
+  {
+    "outputFileName": "App_Start/RouteConfig.cs",
+    "inputFiles": [
+      "App_Start/RouteConfig.cs"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/PublishBundle.js",
+    "inputFiles": [
+      "Scripts/classie.js",
+      "Scripts/wow.min.js",
+      "Scripts/jquery.nanogallery.min.js",
+      "Scripts/jquery.stellar.js",
+      "Scripts/cbpAnimatedHeader.js",
+      "Scripts/bootstrap.min.js",
+      "Scripts/displayVideos.js",
+      "Scripts/scrolling.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/GlobalBundle2.css",
+    "inputFiles": [
+      "Content/bootstrap.css",
+      "Content/nanogallery.min.css",
+      "Content/GlobalBundle.css"
+    ]
   }
 ]

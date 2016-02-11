@@ -8,18 +8,47 @@
 <head>
     @*<meta name="viewport" content="width=device-width" />*@
     <meta charset="utf-8" />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    @*<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>*@
     <meta name="viewport" content="width=device-width, initial-scale=1.0; m">
     <title>@ViewBag.Title - My Video's Application</title>
     @Styles.Render("~/Content/css")
-    
+    <script>dataLayer = [];</script>
 
 
 </head>
 <body>
-    @*nav color was change in bootstrap.css line 4639*@
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KHQKC5"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KHQKC5');
+    
+        
+    </script>
+    <!-- End Google Tag Manager -->
 
+    @*<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  //ga('create', 'UA-53224114-1', 'auto');
+  //ga('send', 'pageview');
+
+    </script>*@
+
+
+    @*nav color was change in bootstrap.css line 4639*@
+    
 
 
     <header id="top">
@@ -43,10 +72,12 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#top">Home</a></li>
-                        <li><a href="#aboutus">About Us</a></li>
-                        <li><a href="#tutorials">Tutorials</a></li>
-                        <li><a href="#contact-us">Contact Us</a></li>
+                        <li><a class="ga" @*onclick="dataLayer.push({'page': 'topMainPage'});"*@ @*onclick="ga('send', 'pageview', '/topMain')"*@ href="#top">Home</a></li>
+                        <li><a class="ga" @*onclick="ga('send', 'pageview', '/aboutus')"*@ href="#aboutus">About Us</a></li>
+                        <li><a class="ga" @*onclick="dataLayer.push({ 'tripCategory': 'tutorials' })"*@ @*onclick="ga('send','pageview', '/tutorials')"*@ href="#tutorials">Tutorials</a></li>
+                        <li><a class="ga" @*onclick="ga('send', 'pageview', '/contact-us')"*@ href="#contact-us">Contact Us</a></li>
+
+
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -125,7 +156,7 @@
     </section>
 
 
-    <section  class="row">
+    <section class="row">
         <div class="fill-screen fixed-attachment background-image-size " style="background-image: url(../../images/flowersFog.jpg)">
 
         </div>
@@ -169,12 +200,8 @@
 
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/mySelection")
 
 
 </body>
 </html>
-
-

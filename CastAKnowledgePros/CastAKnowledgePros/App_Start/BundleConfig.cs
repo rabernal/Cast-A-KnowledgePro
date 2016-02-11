@@ -1,8 +1,8 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace CastAKnowledgePros
 {
+    
     public class BundleConfig
     {
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
@@ -22,40 +22,43 @@ namespace CastAKnowledgePros
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/mySelection").Include(
-                        //"~/Scripts/jquery.fs.wallpaper.min.js",
-                        "~/Scripts/classie.js",
-                        //"~/Scripts/jquery.easing.1.3.js",
-                        "~/Scripts/wow.min.js",
-                        "~/Scripts/jquery.nanogallery.min.js",
-                        "~/Scripts/jquery.stellar.min.js",
-                        //"~/Scripts/respond.js",
-                        "~/Scripts/cbpAnimatedHeader.js",
-                        //"~/Scripts/displayVideos.js",
-                        //"~/Scripts/scrolling.js"
-                        "~/Scripts/MyBundle.min.js"
+                        ////"~/Scripts/jquery.fs.wallpaper.min.js",
+                        //"~/Scripts/classie.js",
+                        ////"~/Scripts/jquery.easing.1.3.js",
+                        //"~/Scripts/wow.min.js",
+                        //"~/Scripts/jquery.nanogallery.min.js",
+                        //"~/Scripts/jquery.stellar.min.js",
+                        ////"~/Scripts/respond.js",
+                        //"~/Scripts/cbpAnimatedHeader.js",
+                        ////"~/Scripts/displayVideos.js",
+                        ////"~/Scripts/scrolling.js"
+                        //"~/Scripts/MyBundle.min.js"
+                        "~/Scripts/PublishBundle.min.js"
 
                         ));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/bootstrap.min.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+            //          "~/Scripts/bootstrap.js",
+            //          "~/Scripts/bootstrap.min.js"));
 
 
 
 
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      ////"~/Content/main.css",
-                      //"~/Content/PagedList.css",
-                      //"~/Content/animate.css",
-                      //"~/Content/font-awesome.min.css",
-                      ////"~/Content/jquery.fs.wallpaper.css",
-                      ////"~/Content/site.css",
-                      ////"~/Content/nav.css",
-                      //"~/Content/app.css",
-                      "~/Content/GlobalBundle.min.css",
-                      "~/Content/nanogallery.min.css"));
+                      //"~/Content/bootstrap.css",
+                      //////"~/Content/main.css",
+                      ////"~/Content/PagedList.css",
+                      ////"~/Content/animate.css",
+                      ////"~/Content/font-awesome.min.css",
+                      //////"~/Content/jquery.fs.wallpaper.css",
+                      //////"~/Content/site.css",
+                      //////"~/Content/nav.css",
+                      ////"~/Content/app.css",
+                      //"~/Content/GlobalBundle.min.css",
+                      //"~/Content/nanogallery.min.css"
+                      "~/Content/GlobalBundle2.min.css"
+                      ));
         }
     }
 }
