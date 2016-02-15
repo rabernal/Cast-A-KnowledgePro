@@ -10,12 +10,12 @@ using System.Data.SqlClient;
 using System.Configuration;
 using Dapper;
 using PagedList;
+using System.Web.Mvc;
 
 namespace CastAKnowledgePros.Repository
 {
     public class VideoRepository : IVideoRepository
     {
-         //private ApplicationDbContext _db;
         private CAKnowledgeDB _db;
 
         public VideoRepository()

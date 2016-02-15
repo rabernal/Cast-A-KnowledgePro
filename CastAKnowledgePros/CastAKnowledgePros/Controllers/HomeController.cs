@@ -8,7 +8,7 @@ using PagedList;
 using System.Net;
 using CastAKnowledgePros.IRepository;
 using CastAKnowledgePros.Repository;
-
+using System.Net.Http.Headers;
 
 namespace CastAKnowledgePros.Controllers
 {
@@ -27,13 +27,13 @@ namespace CastAKnowledgePros.Controllers
         public ActionResult AutoComplete(string term)
         {
             return Json(_getAllVidsFromIVideoRepository.AutoComplete(term).Select(vd => new { label = vd.VidTitle }), JsonRequestBehavior.AllowGet);
-
+            
         }
-
-        [OutputCache(CacheProfile = "short", VaryByHeader = "X-Requested-With", Location = System.Web.UI.OutputCacheLocation.Server)]
+        
+        [OutputCache(CacheProfile = "short", VaryByHeader = "X-Requested-With", Location = System.Web.UI.OutputCacheLocation.ServerAndClient)]
         public ActionResult VideoIndex(string pageSection , string searchTerm = null, int page = 1)
         {
-     
+            
             string searchT = (searchTerm == null) ? searchTerm : searchTerm.ToLower();
             string pageS = (pageSection == null) ? pageSection : pageSection.ToLower();
             if (pageSection != null && Request.IsAjaxRequest())
@@ -53,6 +53,7 @@ namespace CastAKnowledgePros.Controllers
                 {
                     return PartialView("_VideoList", _getAllVidsFromIVideoRepository.GetAllVideos(searchT, page).ToPagedList(page, 6));
                 }
+
  
                 return View(_getAllVidsFromIVideoRepository.GetAllVideos(searchT, page).ToPagedList(page, 6));
 
